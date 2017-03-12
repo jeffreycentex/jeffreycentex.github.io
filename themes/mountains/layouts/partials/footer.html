@@ -14,7 +14,7 @@
     {{if .Params.music -}}<script src="https://cdn.bootcss.com/aplayer/1.5.8/APlayer.min.js"></script>
     <script> var player = new APlayer({ element: document.getElementById('player'), narrow: false, autoplay: false,
         showlrc: false, mutex: true, theme: '#000000', mode: 'random',
-        music: [ {{ $cdn := .Site.Params.musiccdn }}{{ $group := .Params.music}}{{$coverart := .Params.coverart}}{{$location := .Params.location}}
+        music: [ {{ $cdn := .Site.Params.musiccdn }}{{ $group := .Params.music}}{{$coverart := .Params.coverart}}{{$title := .Title}}
         {{ range .Params.playlist}}{{range .songs }}
             { title: '{{.title}}', author: '{{ $group }}', url: '{{  $cdn }}{{ .url }}', pic: '{{ $coverart}}'  },
         {{end}}{{end}}
@@ -27,9 +27,11 @@
           "@type": "Event",
           "startDate": "{{.Date}}",
           "url": "{{.Permalink}}",
-          "name": "{{ $group }}"
+          "name": "{{ $group }}" ,
+          "location": {"@type": "Place", "name": "New Braunfels, TX", "address": {"@type": "PostalAddress", "addressLocality": "New Braunfels", "addressRegion": "TX"}}
         }],
-        "name": "{{ $group }}",
+        "name": "{{ $title }}",
+        "image": "{{ $coverart }}",
         "url": "{{.Permalink}}",
         "track": [
         {{ range .Params.playlist}}{{range .songs }}
