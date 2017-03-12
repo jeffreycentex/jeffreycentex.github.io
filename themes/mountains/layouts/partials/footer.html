@@ -1,5 +1,6 @@
     <div class = "container">
-      <h5>{{.Site.Params.copyright | safeHTML}}    {{.Site.Params.license | safeHTML}}   Hugo Theme "Mountains" by Jeffrey Randow.</h5>
+      <p><small>{{.Site.Params.copyright | safeHTML}}    {{.Site.Params.license | safeHTML}} <br/>
+        Hugo Theme "Mountains" by Jeffrey Randow.  Hugo Version {{.Hugo.Version}}.  Last Rebuild:  {{.Site.LastChange}} </small></p>
     </div>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -13,10 +14,33 @@
     {{if .Params.music -}}<script src="https://cdn.bootcss.com/aplayer/1.5.8/APlayer.min.js"></script>
     <script> var player = new APlayer({ element: document.getElementById('player'), narrow: false, autoplay: false,
         showlrc: false, mutex: true, theme: '#000000', mode: 'random',
-        music: [ {{ $cdn := .Site.Params.musiccdn }}{{ $group := .Params.music}}{{$coverart := .Params.coverart}}
+        music: [ {{ $cdn := .Site.Params.musiccdn }}{{ $group := .Params.music}}{{$coverart := .Params.coverart}}{{$location := .Params.location}}
         {{ range .Params.playlist}}{{range .songs }}
             { title: '{{.title}}', author: '{{ $group }}', url: '{{  $cdn }}{{ .url }}', pic: '{{ $coverart}}'  },
         {{end}}{{end}}
-      ]}); </script>{{end}}
+      ]}); </script>
+      <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "MusicGroup",
+        "event": [{
+          "@type": "Event",
+          "startDate": "{{.Date}}",
+          "url": "{{.Permalink}}",
+          "name": "{{ $group }}"
+        }],
+        "name": "{{ $group }}",
+        "url": "{{.Permalink}}",
+        "track": [
+        {{ range .Params.playlist}}{{range .songs }}
+        {
+          "@type": "MusicRecording",
+          "audio": [{"contentURL":"{{ $cdn }}{{ .url }}","encodingFormat": "mp3"}],
+          "name": "{{.title}}"
+        },
+        {{end}}{{end}}{}]
+      }
+      </script>
+      {{end}}
   </body>
 </html>

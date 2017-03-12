@@ -1,23 +1,23 @@
-<div class="thumbnail">
-  <img src="{{ .Site.Params.author.image }}" alt="" class="img-rounded">
-  <div class="caption text-center">
-    <h2>{{ .Site.Params.author.name }}</h2>
-    <h5>{{ .Site.Params.author.description }}</h5>
+<div class="thumbnail" itemscope itemtype="schema.org/Person">
+  <img itemprop="image" src="{{ .Site.Params.author.image }}" alt="" class="img-rounded">
+  <div class="caption text-center" >
+    <h2 itemprop="name">{{ .Site.Params.author.name }}</h2>
+    <h5 itemprop="description">{{ .Site.Params.author.description }}</h5>
     <h3>
-      {{ with .Site.Params.social.facebook }}<a href="https://www.facebook.com/{{ . }}" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>&nbsp;{{ end }}
-      {{ with .Site.Params.social.twitter }}<a href="https://www.twitter.com/{{ . }}" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;{{ end }}
-      {{ with .Site.Params.social.instagram}}<a href="https://www.instagram.com/{{.}}" data-toggle="tooltip" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;{{ end }}
-      {{ with .Site.Params.social.googleplus}}<a href="https://plus.google.com/u/0/+{{.}}" data-toggle="tooltip" title="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>&nbsp;{{ end }}
-      {{ with .Site.Params.social.pinterest}}<a href="https://www.pinterest.com/{{.}}" data-toggle="tooltip" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>&nbsp;{{ end }}
-      {{ with .Site.Params.social.github }}<a href="https://www.github.com/{{ . }}" data-toggle="tooltip" title="Github"><i class="fa fa-github"></i></a>&nbsp; {{ end }}
-      {{ with .Site.Params.social.gitlab }}<a href="https://www.gitlab.com/{{ . }}" data-toggle="tooltip" title="Gitlab"><i class="fa fa-gitlab"></i></a>&nbsp; {{ end }}
-      {{ with .Site.Params.social.bitbucket }}<a href="https://www.bitbucket.com/{{ . }}" data-toggle="tooltip" title="Bitbucket"><i class="fa fa-bitbucket"></i></a>&nbsp; {{ end }}
-      {{ with .Site.Params.social.linkedin }}<a href="https://www.linkedin.com/in/{{.}}" data-toggle="tooltip" title="LinkedIn"><i class="fa fa-linkedin"></i></a>&nbsp; {{ end }}
-      {{ with .Site.Params.social.stackoverflow }}<a href="http://stackexchange.com/users/{{.}}" data-toggle="tooltip" title="StackOverflow"><i class="fa fa-stack-overflow"></i></a>&nbsp;{{ end }}
-      {{ with .Site.Params.social.quora }}<a href="https://www.quora.com/profile/{{.}}" data-toggle="tooltip" title="Quora"><i class="fa fa-quora"></i></a>&nbsp;{{ end }}
-      {{ with .Site.Params.social.fitbit }}<a href="https://www.fitbit.com/user/{{.}}" data-toggle="tooltip" title="Fitbit"><i class="fa fa-th"></i></a>&nbsp;{{ end }}
-      {{ with .Site.Params.social.youtube }}<a href="https://www.youtube.com/{{.}}" data-toggle="tooltip" title="Youtube"><i class="fa fa-youtube"></i></a>&nbsp;{{ end }}
-      <a href="/index.xml" data-toggle="tooltip" title="RSS/XML"><i class="fa fa-rss"></i></a>
+      {{ with .Site.Params.social.facebook }}<a itemprop="sameAs" href="https://www.facebook.com/{{ . }}" data-toggle="tooltip" title="Facebook"><i class="sb fa fa-facebook" aria-hidden="true"></i></a>&nbsp;{{ end }}
+      {{ with .Site.Params.social.twitter }}<a itemprop="sameAs" href="https://www.twitter.com/{{ . }}" data-toggle="tooltip" title="Twitter"><i class="sb fa fa-twitter" aria-hidden="true"></i></a>&nbsp;{{ end }}
+      {{ with .Site.Params.social.instagram}}<a itemprop="sameAs" href="https://www.instagram.com/{{.}}" data-toggle="tooltip" title="Instagram"><i class="sb fa fa-instagram" aria-hidden="true"></i></a>&nbsp;{{ end }}
+      {{ with .Site.Params.social.googleplus}}<a itemprop="sameAs" href="https://plus.google.com/u/0/+{{.}}" data-toggle="tooltip" title="Google Plus"><i class="sb fa fa-google-plus" aria-hidden="true"></i></a>&nbsp;{{ end }}
+      {{ with .Site.Params.social.pinterest}}<a itemprop="sameAs" href="https://www.pinterest.com/{{.}}" data-toggle="tooltip" title="Pinterest"><i class="sb fa fa-pinterest" aria-hidden="true"></i></a>&nbsp;{{ end }}
+      {{ with .Site.Params.social.github }}<a itemprop="sameAs" href="https://www.github.com/{{ . }}" data-toggle="tooltip" title="Github"><i class="sb fa fa-github"></i></a>&nbsp; {{ end }}
+      {{ with .Site.Params.social.gitlab }}<a itemprop="sameAs" href="https://www.gitlab.com/{{ . }}" data-toggle="tooltip" title="Gitlab"><i class="sb fa fa-gitlab"></i></a>&nbsp; {{ end }}
+      {{ with .Site.Params.social.bitbucket }}<a itemprop="sameAs" href="https://www.bitbucket.com/{{ . }}" data-toggle="tooltip" title="Bitbucket"><i class="sb fa fa-bitbucket"></i></a>&nbsp; {{ end }}
+      {{ with .Site.Params.social.linkedin }}<a itemprop="sameAs" href="https://www.linkedin.com/in/{{.}}" data-toggle="tooltip" title="LinkedIn"><i class="sb fa fa-linkedin"></i></a>&nbsp; {{ end }}
+      {{ with .Site.Params.social.stackoverflow }}<a itemprop="sameAs" href="http://stackexchange.com/users/{{.}}" data-toggle="tooltip" title="StackOverflow"><i class="sb fa fa-stack-overflow"></i></a>&nbsp;{{ end }}
+      {{ with .Site.Params.social.quora }}<a itemprop="sameAs" href="https://www.quora.com/profile/{{.}}" data-toggle="tooltip" title="Quora"><i class="sb fa fa-quora"></i></a>&nbsp;{{ end }}
+      {{ with .Site.Params.social.fitbit }}<a itemprop="sameAs" href="https://www.fitbit.com/user/{{.}}" data-toggle="tooltip" title="Fitbit"><i class="sb fa fa-th"></i></a>&nbsp;{{ end }}
+      {{ with .Site.Params.social.youtube }}<a itemprop="sameAs" href="https://www.youtube.com/{{.}}" data-toggle="tooltip" title="Youtube"><i class="sb fa fa-youtube"></i></a>&nbsp;{{ end }}
+      <a href="/index.xml" data-toggle="tooltip" title="RSS/XML"><i class="sb fa fa-rss"></i></a>
     </h3>
   </div>
 </div>

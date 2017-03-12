@@ -125,7 +125,7 @@ googleAnalytics = "UA-50848309-1"
     weight = 12
     parent = "Who Am I?"
 [[menu.main]]
-    name = "Photo Gallery"
+    name = "Photos"
     url = "/picasa/"
     weight = 3
     pre = "<i class='fa fa-camera'></i>"
@@ -167,3 +167,9 @@ googleAnalytics = "UA-50848309-1"
     weight = 1
     url = "/notes/netsectools/"
     parent = "Notes"
+
+[[menu.main]]
+    name = "Events"
+    weight = 7
+    pre = "<i class='fa fa-calendar'></i>"
+    url = "/events/"
