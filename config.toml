@@ -158,6 +158,11 @@ googleAnalytics = "UA-50848309-1"
     weight = 5
     pre = "<i class='fa fa-server'></i>"
 [[menu.main]]
+    parent = "Projects"
+    weight = 1
+    url = "/project/website-change-log/"
+    name = "Hugo/Website ChangeLog"
+[[menu.main]]
     name = "Notes"
     weight = 6
     pre = "<i class='fa fa-pencil-square-o'></i>"
