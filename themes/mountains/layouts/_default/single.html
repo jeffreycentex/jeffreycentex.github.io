@@ -3,8 +3,8 @@
 <div class = "container" >
   <article>
     <header>
-      <h1 id="title">{{ .Title }}</h1>  {{ $dateFormat := default "Monday, January 2, 2006" (index .Site.Params "date_format") }}
-      {{ if eq .Type "page"}}<h6>Last Updated:  {{.Params.lastupdate}}</h6>{{else}}<h5 id="date"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format $dateFormat }}</time></h5>
+      <h1>{{ .Title }}</h1>  {{ $dateFormat := default "Monday, January 2, 2006" (index .Site.Params "date_format") }}
+      {{ if eq .Type "page"}}<h6>Last Updated:  {{.Params.lastupdate}}</h6>{{else}}<h5 id="date"><time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format $dateFormat }}</time></h5>
       <h5><a href="{{.Permalink}}"><span class="label label-info">Permalink</span></a>        Word Count:  <span class="badge">{{.WordCount}}</span>         {{if .Params.tags}}Tags:  {{ range .Params.tags }}<span class="label label-danger"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a></span> {{ end }}</h5>{{end}}{{end}}
     </header>
     <hr/>
@@ -26,4 +26,23 @@
 <div class = "container">
 {{ template "_internal/disqus.html" . }}
 </div>{{end}}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "@type": "Person",
+    "name": "{{.Site.Params.author.name}}"
+  },
+ "publisher": {
+   "@type": "Person",
+   "name": "{{.Site.Params.author.name}}"
+  },
+  "name": "{{.Title}}",
+  "datePublished": "{{.Date}}",
+  "dateModified": "{{.Date}}",
+  "headline": "{{.Title}}",
+  "image": "{{ with .Params.images }}{{.Params.images}}{{else}}{{.Site.Params.author.image}}{{ end }}"
+}
+</script>
 {{ partial "footer.html" . }}

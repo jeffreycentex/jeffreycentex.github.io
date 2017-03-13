@@ -6,7 +6,7 @@
       {{ .Params.category_desc | markdownify }}
   </div>{{end}}
   <ul class="list-group">
-    <li class="list-group-item list-group-item-success">List of Archive Pages by Date in "{{.Title}}"</li>
+    <li class="list-group-item list-group-item-warning">List of Archive Pages by Date in "{{.Title}}"</li>
   {{ range .Data.Pages }}
     <li class="list-group-item"><span class="badge"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format $dateFormat }}</time></span><a href="{{.Permalink}}">{{.Title | markdownify}}</a></li>
   {{ end }}

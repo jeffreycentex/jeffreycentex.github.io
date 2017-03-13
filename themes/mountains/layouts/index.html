@@ -10,12 +10,12 @@
     <nav aria-label="pagination">
       <ul class="pager">
         {{ if and (.Paginator.HasPrev) (.Paginator.HasNext) }}
-        <li class="previous"><a href="{{ .Paginator.Prev.URL }}">&larr; Older</a></li>
-        <li class="next"><a href="{{ .Paginator.Next.URL }}">Newer &rarr;</a></li>{{ end }}
-        {{ if and (.Paginator.HasPrev) (not .Paginator.HasNext) }}<li class="previous"><a href="{{ .Paginator.Prev.URL }}">&larr; Older</a></li>
-        <li class="next disabled"><a href="">Newer &rarr;</a></li>{{ end }}
-        {{ if and (not .Paginator.HasPrev) (.Paginator.HasNext) }}<li class="previous disabled"><a href="">&larr; Older</a></li>
-        <li class="next"><a href="{{ .Paginator.Next.URL }}">Newer &rarr;</a></li>{{ end }}
+        <li class="previous"><a href="{{ .Paginator.Prev.URL }}">&larr; Previous Page</a></li>
+        <li class="next"><a href="{{ .Paginator.Next.URL }}">Next Page &rarr;</a></li>{{ end }}
+        {{ if and (.Paginator.HasPrev) (not .Paginator.HasNext) }}<li class="previous"><a href="{{ .Paginator.Prev.URL }}">&larr; Previous Page</a></li>
+        <li class="next disabled"><a href="">Next Page &rarr;</a></li>{{ end }}
+        {{ if and (not .Paginator.HasPrev) (.Paginator.HasNext) }}<li class="previous disabled"><a href="">&larr; Previous Page</a></li>
+        <li class="next"><a href="{{ .Paginator.Next.URL }}">Next Page &rarr;</a></li>{{ end }}
       </ul>
     </nav>
     {{ end }}
