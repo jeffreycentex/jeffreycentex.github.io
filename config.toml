@@ -33,7 +33,6 @@ googleAnalytics = "UA-50848309-1"
 [permalinks]
   post = "/:section/:title"
 
-
 [params.social]
   github          = "jeffreycentex"
   facebook        = "jeffreycentex"

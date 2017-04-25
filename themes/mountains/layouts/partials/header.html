@@ -35,6 +35,9 @@
     {{ else }}<meta name="twitter:card" content="summary"/>
     <meta name="twitter:image:src" content="{{$image | absURL}}"/>{{ end }}
 
+    {{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} - {{.Title}}" />
+    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{.Site.Title}} - {{ .Title }}" />{{ end }}
+
     <link rel="icon" href="/images/favicon.ico">
     <link rel="canonical" href="{{ .Permalink | absURL }}" />
 
@@ -56,6 +59,6 @@
     {{ "<![endif]-->" | safeHTML }}
     {{- block "css" . -}}{{end}}
     {{ if .Params.music}}{{ $cdn := .Site.Params.musiccdn }}{{ range .Params.playlist}}{{range .songs }}
-        <meta property="og:audio" content="{{$cdn}}{{.url}}">
-        <meta property="og:title" content="{{.title}}">{{end}}{{end}}{{end}}
+    <meta property="og:audio" content="{{$cdn}}{{.url}}">
+    <meta property="og:title" content="{{.title}}">{{end}}{{end}}{{end}}
   </head>

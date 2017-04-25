@@ -1,4 +1,4 @@
-image: publysher/hugo
+image: jojomi/hugo:latest
 
 pages:
   script:
