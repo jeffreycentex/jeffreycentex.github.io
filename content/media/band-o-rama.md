@@ -5,7 +5,7 @@ title: 1995 Band-O-Rama
 categories:   ["media"]
 tags:         ["Longhorn Band"]
 music:        "Longhorn Band"
-coverart:     ""
+coverart:     "https://s3.amazonaws.com/static.jeffreyrandow.org/images/lhb.jpg"
 
 playlist:
   - songs:
