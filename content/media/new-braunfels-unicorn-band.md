@@ -11,18 +11,31 @@ Let me back up a little bit before I continue to stroll down my Longhorn Band me
 
 So here we are, the three shows that still exist as of today.  I'm sorry for the quality, but remember in the 1980's - we didn't have High Definition.  We also had parents who were the camera people.  None of these videos were from me or my family (we didn't have a video camera until I was a junior in college) - they were grabbed off of Facebook or Youtube.
 
-Reflections about my time in band.
+Here is a photo of all of the senior band geeks in 1990:
+
+{{< cdnfigure folder="images" file="seniorband.jpg" title="NBHS 1990 Senior Band Geeks and Dweebs" >}}
+
+**Reflections about my time in band**
 
 My freshman year sucked.  There were some upperclassmen tuba players who did not like me and took way too much advantage in my naivete.  I forgive them, but the mental scars do hurt.  Most of my friends didn't start band until I was a Junior.  I don't know why, but I could relate to them a whole lot better than most of my class.  I made All-District and All-Region in all years except for my freshman year (I didn't try out.  See upperclassmen note above).  I bombed out when I had to go to the combined Region contest at McArthur every year while competing with the 5-A band members.  I was first chair Region band for two years and second chair my first year.  Not bad considering I learned how to play the tuba the summer before my 8th grade year.  I still don't know how to play everything properly - I can't do pedal tones and my articulation is...  crappy..  But hey, I had to teach myself and I'm good at faking it...
 
-1986 Halftime Show at State Marching Band Competition.  My favorite show.
+
+**1986 Halftime Show at State Marching Band Competition.  My favorite show.**
 
 {{<youtube I8IlK3qxyIs>}}
 
-1988 Haftime Show at Region Band Contest.
+
+
+**1988 Haftime Show at Region Band Contest.**
 
 {{<youtube rTihpH1g0VU>}}
 
-1989 Halftime Show at District Band Contest.
+
+
+**1989 Halftime Show at District Band Contest.**
 
 {{<youtube dbY_c3UOmSo>}}
+
+
+
+h/t to David Campos and Bryan Feltner
