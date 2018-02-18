@@ -1,7 +1,7 @@
 +++
 title = "February 2018 Update"
 date = "2018-02-18"
-description = "February 201 Update"8
+description = "February 201 Update"
 categories = ["blog"]
 comments = "true"
 tags = []
