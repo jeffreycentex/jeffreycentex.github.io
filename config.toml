@@ -143,19 +143,24 @@ googleAnalytics = "UA-50848309-1"
     weight = 1
     parent = "Bands"
 [[menu.main]]
+    name = "San Antonio Symphonic Band"
+    url = "/tags/san-antonio-symphonic-band/"
+    weight = 2
+    parent = "Bands"
+[[menu.main]]
     name = "Oakwood Orchestra"
     url = "/tags/oakwood-orchestra/"
-    weight = 2
+    weight = 3
     parent = "Bands"
 [[menu.main]]
     name = "Longhorn/Longhorn Alumni Band"
     url = "/tags/longhorn-band/"
-    weight = 3
+    weight = 4
     parent = "Bands"
 [[menu.main]]
     name = "New Braunfels Unicorn Band"
     url = "/tags/unicorn-band/"
-    weight = 4
+    weight = 5
     parent = "Bands"
 [[menu.main]]
     name = "Projects"
