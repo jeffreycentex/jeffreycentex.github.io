@@ -6,7 +6,7 @@ categories = ["blog"]
 comments = "true"
 tags = []
 +++
-Hey everyone out there who maybe reading.  Yeah, I lagged a bit in posting.  It has been a busy year.  I am backfilling posts with concert media, so keep an eye for some older posts.  I'm using the date of the actual activity for the post.
+Hey everyone out there who maybe reading.  Yeah, I lagged a bit in posting.  It has been a busy year.  I am backfilling posts with concert media, so keep an eye for some older posts.  I'm using the date of the actual activity for the post.  I also enabled the Events tab that links to my Google Calendar.  At some point in time, I need to migrate my Photos to a different service because Google has decided to make third party access as difficult as possible for no good reasons.
 
 So what's new?
 
