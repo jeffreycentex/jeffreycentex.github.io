@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Jeffreys Ruminations</title>
+    <link>https://www.jeffreyrandow.org/categories/</link>
+    <description>Recent content in Categories on Jeffreys Ruminations</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.jeffreyrandow.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://www.jeffreyrandow.org/categories/blog/</link>
+      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.jeffreyrandow.org/categories/fitness/</link>
+      <pubDate>Fri, 03 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/categories/fitness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Autism/Aspergers Support</title>
+      <link>https://www.jeffreyrandow.org/categories/aspergers/</link>
+      <pubDate>Sun, 27 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/categories/aspergers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Band Audio/Video Files</title>
+      <link>https://www.jeffreyrandow.org/categories/media/</link>
+      <pubDate>Fri, 09 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/categories/media/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Band Audio/Video Files</title>
+      <link>https://www.jeffreyrandow.org/categories/music/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/categories/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network and Information Security</title>
+      <link>https://www.jeffreyrandow.org/categories/netsec/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/categories/netsec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Previous Network Blog Content (Archived)</title>
+      <link>https://www.jeffreyrandow.org/categories/old-network-blog/</link>
+      <pubDate>Mon, 16 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/categories/old-network-blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project</title>
+      <link>https://www.jeffreyrandow.org/categories/project/</link>
+      <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/categories/project/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

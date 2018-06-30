@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Jeffreys Ruminations</title>
+    <link>https://www.jeffreyrandow.org/notes/</link>
+    <description>Recent content in Notes on Jeffreys Ruminations</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://www.jeffreyrandow.org/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Network Security Tools Notebook</title>
+      <link>https://www.jeffreyrandow.org/notes/netsectools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/notes/netsectools/</guid>
+      <description>This page is for my Network Security Tools and Tips/Tricks.
+Links:
+Have I Been Pwned! - A site to check if your email address has been in most of the public breaches
+VirusTotal - Check Links or Files to see if it is a virus. This site checks your submission with 60+ AV engines. It also submits files to the next site for analysis.
+Malwr.com - Used with VirusTotal to sandbox viruses to determine what they do.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,11 @@
+h3.article-title a {color: black; font-weight: bold;}
+h3.article-title a:hover {text-decoration: none;}
+h1#header {color: white; font-weight:bold; font-variant:small-caps;}
+h3#header {color: white; font-variant: small-caps;}
+time.article-date {font-weight: bold;}
+h1#title {color: black; font-variant: small-caps; font-weight: bold;}
+h5#date {font-weight: bold;}
+span.label a {color: white;}
+span.label a:hover {text-decoration: none;}
+.sb {color: black;}
+body { margin-top: 40px; }

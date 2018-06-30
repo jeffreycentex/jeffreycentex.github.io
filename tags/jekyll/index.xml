@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jekyll on Jeffreys Ruminations</title>
+    <link>https://www.jeffreyrandow.org/tags/jekyll/</link>
+    <description>Recent content in Jekyll on Jeffreys Ruminations</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 May 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.jeffreyrandow.org/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sticky:  Site Status Report</title>
+      <link>https://www.jeffreyrandow.org/blogs/status-report/</link>
+      <pubDate>Mon, 12 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/status-report/</guid>
+      <description>This will be a sticky post that I will update as I change things on the site.
+As of May 12, 2014, I have finished the following:
+ Imported all of the old postings from Wordpress and migrated them to the new system. Implemented Blog Roll. Got MediaElements.JS to finally cooperate. Photo Galleries online. Set up GDrive CDN  Work to be done:
+ Finish Templating (Author) Twitter Card Open Graph Collections  This has been a fun project.</description>
+    </item>
+    
+  </channel>
+</rss>

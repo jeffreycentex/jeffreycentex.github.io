@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jeffreys Ruminations</title>
+    <link>https://www.jeffreyrandow.org/categories/blog/</link>
+    <description>Recent content on Jeffreys Ruminations</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.jeffreyrandow.org/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>February 2018 Update</title>
+      <link>https://www.jeffreyrandow.org/blogs/2018-feb-update/</link>
+      <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/2018-feb-update/</guid>
+      <description>Hey everyone out there who maybe reading. Yeah, I lagged a bit in posting. It has been a busy year. I am backfilling posts with concert media, so keep an eye for some older posts. I&amp;rsquo;m using the date of the actual activity for the post. I also enabled the Events tab that links to my Google Calendar. At some point in time, I need to migrate my Photos to a different service because Google has decided to make third party access as difficult as possible for no good reasons.</description>
+    </item>
+    
+    <item>
+      <title>February 2017 End of Month Rollup Update</title>
+      <link>https://www.jeffreyrandow.org/blogs/20170227-endoffebruaryupdate/</link>
+      <pubDate>Mon, 27 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/20170227-endoffebruaryupdate/</guid>
+      <description>Updated to Hugo 0.19
+I did my first ever public pull-request on github by updating the gitlab pages hugo docker script to hugo 0.19. I&amp;rsquo;ve done pull requests on my private repos and servers, but never on the public facing one. So everything has been updated to 0.19 and all of the links now work. :)
+OK, my initial plan of posting weekly went the way of the dodo-bird. It&amp;rsquo;s been a hectic month and I have only since gotten my head above the water.</description>
+    </item>
+    
+    <item>
+      <title>New Year New Start - Blog Relaunch</title>
+      <link>https://www.jeffreyrandow.org/blogs/blog-relaunch/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/blog-relaunch/</guid>
+      <description>This posting launches the new and improved &amp;ldquo;Jeffreys Ruminations&amp;rdquo;. The previous blog was kept offline for so long because I was no longer able to generate new pages in Jekyll (the static site generator on the old site). I have since rewritten the entire site from scratch complete with my own new theme based on Bootstrap 3 for the Hugo Static Site Generator program. This has been a fun project and a learning experience for both HTML5/CSS3 and Hugo.</description>
+    </item>
+    
+    <item>
+      <title>Longhorn Alumni Band 2014</title>
+      <link>https://www.jeffreyrandow.org/blogs/longhorn-alumni-band-2014/</link>
+      <pubDate>Fri, 24 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/longhorn-alumni-band-2014/</guid>
+      <description>On October 18, 2014, I participated in the 51st Annual Longhorn Alumni Band Reunion at the Texas vs Iowa State. This was the first time I have participated in the last 10 years (I used to always do it from 1995-2002, but dropped out afterwards). This completes one item from my Ultimate Quest List for 2014-2015 (see The Road Ahead for more information on the Ultimate Quest).
+For this event, I decided to do a couple of videos.</description>
+    </item>
+    
+    <item>
+      <title>Life Updates and Musings</title>
+      <link>https://www.jeffreyrandow.org/blogs/life-updates-and-musings/</link>
+      <pubDate>Mon, 19 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/life-updates-and-musings/</guid>
+      <description>(includes updates from May 25, 2014 - JER)
+I&amp;rsquo;ve gotten this website to a functional level, so I guess it is time to do an update on what is going on in my life right now. It&amp;rsquo;s been a busy time, but I&amp;rsquo;ve been enjoying myself working on some interesting projects at work. Life is different in the non-engineering world and I think it would have been better if I had changed a few years earlier than I did.</description>
+    </item>
+    
+    <item>
+      <title>Sticky:  Site Status Report</title>
+      <link>https://www.jeffreyrandow.org/blogs/status-report/</link>
+      <pubDate>Mon, 12 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/status-report/</guid>
+      <description>This will be a sticky post that I will update as I change things on the site.
+As of May 12, 2014, I have finished the following:
+ Imported all of the old postings from Wordpress and migrated them to the new system. Implemented Blog Roll. Got MediaElements.JS to finally cooperate. Photo Galleries online. Set up GDrive CDN  Work to be done:
+ Finish Templating (Author) Twitter Card Open Graph Collections  This has been a fun project.</description>
+    </item>
+    
+    <item>
+      <title>Life at a Crossroads - The Brick Wall</title>
+      <link>https://www.jeffreyrandow.org/blogs/life-at-a-crossroads-the-brick-wall/</link>
+      <pubDate>Sun, 24 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/life-at-a-crossroads-the-brick-wall/</guid>
+      <description>As some of you may know, I have been battling many demons this year – some health-related, some work-related, and many personal struggles. Throughout these trials and tribulations, I have acquired a few new insights into myself and have noticed the gaping chasm that I am either unable or (shudder) unwilling to cross in all areas of my life. To put it in the parlance of the Easter sermon from church this weekend – I have hit my brick wall.</description>
+    </item>
+    
+    <item>
+      <title>Roadie</title>
+      <link>https://www.jeffreyrandow.org/blogs/roadie/</link>
+      <pubDate>Tue, 07 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/roadie/</guid>
+      <description>Well, maybe not quite&amp;hellip; I&amp;rsquo;ve been learning a lot of the background of sound engineering from the friends at church. It is a much different world than what I am used to and I can definately say that it is fun. :) (Fun isn&amp;rsquo;t a word you normally hear out of my mouth). It can be work, especially with transporting the equipment and the teardown, but it is a good labor of love.</description>
+    </item>
+    
+    <item>
+      <title>Tropical Storm Hermine Redux</title>
+      <link>https://www.jeffreyrandow.org/blogs/tropical-storm-hermine-redux/</link>
+      <pubDate>Wed, 08 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/tropical-storm-hermine-redux/</guid>
+      <description>My official total as of 8 AM Wednesday morning is 6.89 inches of total rainfall. We are expecting more this afternoon.
+This is an excerpt of an email I sent to my office staff:
+In the (immediate) aftermath of Tropical Storm Hermine, I thought you might like to know the total precipitation that has fallen as a result of this storm. This data was obtained by individuals using high accuracy manual rain gauges and are part of the CoCoRaHS network (Community Collaborative Rain, Hail, and Snow Network) – I’m station TX-CML-38.</description>
+    </item>
+    
+    <item>
+      <title>Las Vegas Trip Thoughts</title>
+      <link>https://www.jeffreyrandow.org/blogs/las-vegas-trip-thoughts/</link>
+      <pubDate>Sun, 28 Jun 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/las-vegas-trip-thoughts/</guid>
+      <description>I am now back home from my weekend trip to Las Vegas to celebrate Tommy&amp;rsquo;s upcoming wedding. We left at dark oclock on Thursday morning and arrived home late Saturday night. A total of eleven people went including some fellow co-workers and even my overall boss. As some of you may know, I had decided after my 2003 Las Vegas trip vowing never to return. It would take a lot of convincing or a special event to get me to reconsider going.</description>
+    </item>
+    
+    <item>
+      <title>First Year Thoughts</title>
+      <link>https://www.jeffreyrandow.org/blogs/first-year-thoughts/</link>
+      <pubDate>Tue, 14 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/first-year-thoughts/</guid>
+      <description>It has now been one full year since I had to &amp;ldquo;press the reset button of life&amp;rdquo;. I can&amp;rsquo;t say that the past year has been easy. It has been rough. Terribly rough. But it is a phase of my life that I must push through, regardless if I want to or not. I&amp;rsquo;m writing this posting to talk about things that I have learned over the past year and some of the areas that I need to improve on.</description>
+    </item>
+    
+    <item>
+      <title>April Showers</title>
+      <link>https://www.jeffreyrandow.org/blogs/april-showers/</link>
+      <pubDate>Sun, 05 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/april-showers/</guid>
+      <description>It&amp;rsquo;s about time for me to post an update and brain dump:
+ The planter garden is done (for now) with four rosebushes (three of which are blooming right now), six marigolds, 5 daylilies, and a few cannas. I still have much more to plant, but I want to make sure that these things live first. I have seven tomato plants with three actual tomatoes on them (and many, many blooms) and more onions than what I know what do with (I love onions).</description>
+    </item>
+    
+    <item>
+      <title>Work-In-Progress:  Planter Bed</title>
+      <link>https://www.jeffreyrandow.org/blogs/work-in-progress-planter-bed/</link>
+      <pubDate>Sun, 15 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/work-in-progress-planter-bed/</guid>
+      <description>The picture to the left represents my latest work-in-progress - my planter bed at the gate. This will be for a future rose garden (it isn&amp;rsquo;t time to plant rose bushes yet in this part of Texas) in honor of my mother who passed away last April. It isn&amp;rsquo;t done yet - I need about another 15 wheelbarrow loads of dirt from my dirt pile to fill it up, put mulch down, and plant more &amp;ldquo;plants&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Site Update and News</title>
+      <link>https://www.jeffreyrandow.org/blogs/site-update-and-news/</link>
+      <pubDate>Sat, 14 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/site-update-and-news/</guid>
+      <description>OK, I have a quick update&amp;hellip; I&amp;rsquo;ve moved the server once again - this time to my home. I have finally been able to upgrade from my original 384K DSL to a more modern 3 MB/512KB with a static IP address, so I should be able to host from home again. Things might be a bit slower, but I haven&amp;rsquo;t noticed many issues during the &amp;ldquo;beta&amp;rdquo; phase of the transition.</description>
+    </item>
+    
+    <item>
+      <title>2009 New Years Resolutions</title>
+      <link>https://www.jeffreyrandow.org/blogs/2009-new-years-resolutions/</link>
+      <pubDate>Wed, 31 Dec 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/2009-new-years-resolutions/</guid>
+      <description>OK, I missed my &amp;ldquo;What I Want for Christmas&amp;rdquo; post, but I will make the 2009 New Years Resolution posting before 2008 is over. 2008 has been an extremely difficult and depressing year. I want 2009 to be a fresh start in all aspects of my life. Thus, most of my resolutions are in the &amp;ldquo;self-help&amp;rdquo; mode and I will actually strive to follow them. Well, first the list:
+ Live Life in the Present and with No Regrets Keep Up With Exercise and Being More Active Learn How to Relax and Not Stress  These may seem to be simple and to most people would be fairly trivial.</description>
+    </item>
+    
+    <item>
+      <title>December Update</title>
+      <link>https://www.jeffreyrandow.org/blogs/december-update/</link>
+      <pubDate>Tue, 16 Dec 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/december-update/</guid>
+      <description>This is the first of a few postings in the coming days.. First, consider me kicked for taking so long to post (almost 2 full months since my last post). I&amp;rsquo;ll also be doing my first video log entry as a Christmas video that I will be linking to when I (finally) send out Christmas cards later this week (all are relatively local, so it shouldn&amp;rsquo;t be a big deal to get at their destination in a reasonable amount of time).</description>
+    </item>
+    
+    <item>
+      <title>Whats Up?</title>
+      <link>https://www.jeffreyrandow.org/blogs/whats-up/</link>
+      <pubDate>Fri, 24 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/whats-up/</guid>
+      <description>OK, I seemed to have regressed into my old habit of taking a long time for blog postings&amp;hellip; However nice the 4 day - 10 hours workdays are, it leaves me with little time on Monday through Thursdays. Throw in a weekly band practice, an occasional bowling league appearance (I&amp;rsquo;m a substitute for an office league), a bible study class, and just the general stuff, I have no free time. Plus, I&amp;rsquo;ve also started redecorating the house a bit - painted the bedroom a &amp;ldquo;clarified butter&amp;rdquo; color and moved into the master bedroom, cleaning the house, doing yardwork, football games, and church eat up my three day weekends.</description>
+    </item>
+    
+    <item>
+      <title>September Thoughts</title>
+      <link>https://www.jeffreyrandow.org/blogs/september-thoughts/</link>
+      <pubDate>Sun, 07 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/september-thoughts/</guid>
+      <description>I just posted what was probably my first three page long rant posting. It&amp;rsquo;s password protected as it was only meant for me to have a relief posting. It helped somewhat&amp;hellip; :)
+On to my regular posting. It has been almost five months since the incident. I&amp;rsquo;m still struggling with raw emotions, grief, and regrets quite a few times a week. It&amp;rsquo;s getting better in some ways and worse in other ways.</description>
+    </item>
+    
+    <item>
+      <title>August Musings</title>
+      <link>https://www.jeffreyrandow.org/blogs/august-musings/</link>
+      <pubDate>Sun, 03 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/august-musings/</guid>
+      <description>Well, we have finally reached August, temperatures are hitting record highs, and summer is finally close to being over. This year has been bad. Much of it has to do with the events of March and April, but sometimes life is zigging when I want it to zag. This weekend posed new problems - of which I don&amp;rsquo;t need more of. On top of everything I must deal with on the house and the property, I now &amp;ldquo;function&amp;rdquo; as a home for a family of skunks.</description>
+    </item>
+    
+    <item>
+      <title>DCI Southwestern Championship</title>
+      <link>https://www.jeffreyrandow.org/blogs/dci-southwestern-championship/</link>
+      <pubDate>Sun, 20 Jul 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/dci-southwestern-championship/</guid>
+      <description>I attended the Drum Corp International (DCI) Southwestern Championship at the AlamoDome in San Antonio, TX last night with two college friends and a great time was had by all. The Blue Devils were the ultimate winner last night, the Cavies came in second, and Carolina Crown came in third. Personally, I enjoyed the Blue Devils, Crown, and the Blue Coats performances the best. Some thoughts about the different corps from this traditional marching band conneiseur:</description>
+    </item>
+    
+    <item>
+      <title>Weather Website</title>
+      <link>https://www.jeffreyrandow.org/blogs/weather-website/</link>
+      <pubDate>Mon, 30 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/weather-website/</guid>
+      <description>This is just a quick posting that I have made the weather website live again&amp;hellip; This is the site I used to have up a long time ago and is still very beta and needs to have many more improvements made, but for those of you in the local area who need access to the current data on this side of New Braunfels, please have at it: New Braunfels Weather</description>
+    </item>
+    
+    <item>
+      <title>Puppy Love</title>
+      <link>https://www.jeffreyrandow.org/blogs/puppy-love/</link>
+      <pubDate>Sun, 29 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/puppy-love/</guid>
+      <description>In case you haven&amp;rsquo;t seen my Twitter or Facebook postings, I picked up my 7-week old chocolate lab puppy named Rudy (after my grandfather Rudolph Jaks, and also my father&amp;rsquo;s middle name - Wilburn Rudolph Randow) from a former co-worker last weekend. This has been an interesting experience due to the fact that this is:
+1. My first indoor dog. Well, let me rephrase that. He stays inside with me at night.</description>
+    </item>
+    
+    <item>
+      <title>How I Feel</title>
+      <link>https://www.jeffreyrandow.org/blogs/how-i-feel/</link>
+      <pubDate>Fri, 20 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/how-i-feel/</guid>
+      <description>I have now completed two months since my own D-Day. I&amp;rsquo;m still grieving, hurting, in pain, and suffering. I fear that I will for some months or years to come. My biggest problem is one that I wasn&amp;rsquo;t expecting, but I guess that I should have - GUILT. I have found the following article on the internet - &amp;ldquo;Guilt after the loss of your Spouse&amp;rdquo; that has described in detail exactly what I have been going though.</description>
+    </item>
+    
+    <item>
+      <title>Grief Sucks and Other Musings</title>
+      <link>https://www.jeffreyrandow.org/blogs/grief-sucks-and-other-musings/</link>
+      <pubDate>Sun, 08 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/grief-sucks-and-other-musings/</guid>
+      <description>Well, I&amp;rsquo;m quickly approaching the two month anniversary of my mother&amp;rsquo;s passing (one week from today on Father&amp;rsquo;s Day). I have had my ups and downs. Some days are incredible. Some days involve me dwelling in places so horrible that I can&amp;rsquo;t believe my mind can conjure them. I know this is a process and that everyone has to go through it. When my dad passed away a bit over ten years ago, the grief process wasn&amp;rsquo;t as involved.</description>
+    </item>
+    
+    <item>
+      <title>Family Photo Album</title>
+      <link>https://www.jeffreyrandow.org/blogs/family-photo-album/</link>
+      <pubDate>Wed, 21 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/family-photo-album/</guid>
+      <description>Yes, as I promised I have (or will have) posted more photos from my family - primarily of my mother and father - and most from before my time. For the memorial service, I picked a smattering of photos for the viewing. However, I missed the &amp;ldquo;treasurelode&amp;rdquo; of pictures contained in a different bedroom and closet that I think are much better. So please reminisce over these photos and help fill in the blanks on when and where some of these places were.</description>
+    </item>
+    
+    <item>
+      <title>The rest of my life</title>
+      <link>https://www.jeffreyrandow.org/blogs/the-rest-of-my-life/</link>
+      <pubDate>Wed, 21 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/the-rest-of-my-life/</guid>
+      <description>As you may or may not have noticed, all of my old content here has been removed. Just over a month ago, a traumatic event happened in my life - the passing away of my mother due to Chronic Obstructive Pulmonary Disease (COPD). As some of you know, I was her caregiver for the past six years since the first diagnosis of COPD. This has caused many ups-and-downs in my life.</description>
+    </item>
+    
+  </channel>
+</rss>

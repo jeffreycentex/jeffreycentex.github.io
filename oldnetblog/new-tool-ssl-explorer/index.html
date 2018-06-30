@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-language" content="en-us">
+
+    <meta name="author" content="Jeffrey Randow">
+    <meta name="generator" content="Hugo 0.42.1" />
+    <meta property="article:author" content="https://www.facebook.com/jeffreycentex" />
+    <meta name="description" content="OK, while I was browsing Sourceforge this evening, I came across a new release for a tool that I haven’t seen before - SSL-Explorer. Per the project website:
+SSL-Explorer is a fully-featured, web-based SSL VPN server. This practicable remote access security solution includes SSL tunneling, intranet website proxying, Microsoft Windows file sharing and Java application deployment through a standard browser
+ It works pretty well. This is a pretty good solution for small businesses (or power users) who need to give remote access to users who may be using third party machines or those who are not savvy enough to set up a VPN connection.">
+    <meta name="keywords" content="">
+    <meta name="google-site-verification" content="FMqY8YcPFBLiVV4iRmKNvq2LxlzY7-FdWVWVwWu6dOo">
+    <meta name="msvalidate.01" content="B160D0FBA35FCBF482CC9B7A920FF672">
+
+    <meta name="geo.position" content="29.7; -98.1">
+    <meta name="geo.placename" content = "New Braunfels, TX">
+    <meta name="geo.region" content="US-TX">
+
+    <meta property="og:title" content="New Tool:  SSL-Explorer">
+    <meta property="og:description" content="OK, while I was browsing Sourceforge this evening, I came across a new release for a tool that I haven’t seen before - SSL-Explorer. Per the project website:
+SSL-Explorer is a fully-featured, web-based SSL VPN server. This practicable remote access security solution includes SSL tunneling, intranet website proxying, Microsoft Windows file sharing and Java application deployment through a standard browser
+ It works pretty well. This is a pretty good solution for small businesses (or power users) who need to give remote access to users who may be using third party machines or those who are not savvy enough to set up a VPN connection.">
+    <meta property="og:url" content="https://www.jeffreyrandow.org/oldnetblog/new-tool-ssl-explorer/">
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="oldnetblog" />
+    <meta property="og:site_name" content="Jeffreys Ruminations">
+    
+
+    <meta name="twitter:site" content="@jeffreycentex" />
+    <meta name="twitter:creator" content="@jeffreycentex" />
+    <meta name="twitter:title" content="New Tool:  SSL-Explorer">
+    <meta name="twitter:description" content="OK, while I was browsing Sourceforge this evening, I came across a new release for a tool that I haven’t seen before - SSL-Explorer. Per the project website:
+SSL-Explorer is a fully-featured, web-based SSL VPN server. This practicable remote access security solution includes SSL tunneling, intranet website proxying, Microsoft Windows file sharing and Java application deployment through a standard browser
+ It works pretty well. This is a pretty good solution for small businesses (or power users) who need to give remote access to users who may be using third party machines or those who are not savvy enough to set up a VPN connection.">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:image:src" content="https://s3.amazonaws.com/static.jeffreyrandow.org/images/jeffrey.jpg"/>
+
+    
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="canonical" href="https://www.jeffreyrandow.org/oldnetblog/new-tool-ssl-explorer/" />
+
+    <title>New Tool:  SSL-Explorer</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/theme.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src='/js/ie8-responsive-file-warning.js'></script><![endif]-->
+    <script src="/js/ie-emulation-modes-warning.js"></script>
+
+    
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-50848309-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+
+  <body>
+        
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Jeffreys Ruminations</a>
+        </div>        
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav"><li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class='fa fa-male'></i>  Who Am I? <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/about/contact/">  Contact Jeffrey</a></li>
+                <li><a href="/about/resumes/">  Resumes and CV</a></li>
+                <li><a href="/about/certificates/">  Certificates/PGP</a></li>
+                <li role="separator" class="divider"></li><li class="dropdown-header"> Christianity</li>
+                <li><a href="/christianity/faith/">  My Beliefs</a></li>
+                <li><a href="/christianity/testimony/">  My Testimony</a></li>
+                <li><a href="/christianity/accountability/">  About Accountability Groups</a></li>
+                <li role="separator" class="divider"></li><li class="dropdown-header"> Weather</li>
+                <li><a href="/weather/">  About My Weather Station</a></li>
+                <li><a href="https://www.nbtx-wx.com/">  Weather Website</a></li>
+                <li><a href="/about/">  About Jeffrey</a></li>
+                
+              </ul>
+            </li>
+            <li><a href="/picasa/"><i class='fa fa-camera'></i>  Photos</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class='fa fa-music'></i>  Bands <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/tags/comal-community-band/">  Comal Community Band</a></li>
+                <li><a href="/tags/san-antonio-symphonic-band/">  San Antonio Symphonic Band</a></li>
+                <li><a href="/tags/oakwood-orchestra/">  Oakwood Orchestra</a></li>
+                <li><a href="/tags/longhorn-band/">  Longhorn/Longhorn Alumni Band</a></li>
+                <li><a href="/tags/unicorn-band/">  New Braunfels Unicorn Band</a></li>
+                <li><a href="/tags/hill-country-community-band/">  Hill Country Community Band</a></li>
+                
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class='fa fa-server'></i>  Projects <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/project/website-change-log/">  Hugo/Website ChangeLog</a></li>
+                
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class='fa fa-pencil-square-o'></i>  Notes <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/notes/netsectools/">  Network Security Notebook</a></li>
+                
+              </ul>
+            </li>
+            <li><a href="/events/"><i class='fa fa-calendar'></i>  Events</a></li>
+            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-tags"></i>  Categories <span class="caret"></span></a>
+              <ul class="dropdown-menu"><li><a href="/categories/aspergers/">Aspergers</a></li>
+                <li><a href="/categories/blog/">Blog</a></li>
+                <li><a href="/categories/fitness/">Fitness</a></li>
+                <li><a href="/categories/media/">Media</a></li>
+                <li><a href="/categories/netsec/">Netsec</a></li>
+                <li><a href="/categories/old-network-blog/">Old Network Blog</a></li>
+                <li><a href="/categories/project/">Project</a></li>
+                
+                <li role="separator" class="divider"></li>
+                <li><a href="/tags/"><span class="fa fa-tags"></span>  Tags</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="carousel-example-generic" class="carousel slide hidden-xs hidden-sm" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="/images/mountain-banner.jpg" alt="Site Banner Image">
+          <div class="carousel-caption">
+            <h1 id="header">Jeffreys Ruminations</h1>
+            <h3 id="header">An intrepid adventurer in the Game of Life.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "container hidden-md hidden-lg">
+      <h2>Jeffreys Ruminations</h2>
+      <h4>An intrepid adventurer in the Game of Life.</h4>
+    </div>
+    <br/>
+
+<div class = "container" role="main">
+<section id="main">
+  <h1 id="title">New Tool:  SSL-Explorer</h1>
+  <h5><time datetime="2005-05-17T00:00:00Z">Tuesday, May 17, 2005</time></h5>
+  <div class="alert alert-danger" role="alert">
+     <h4>Alert - Archived Data</h4>
+     <p>Please note that the old Network Blog content (from http://www.networkblog.net) is included for historic purposes only.  Much of this data is either no longer relevant
+      or may be missing from the original source.  Most of this data was back from my MVP age and is over ten years old.  Thus, many of the links
+      are no longer valid as Microsoft has changed the links on many of their Technet sites.</p>
+  </div>
+  <div>
+        <article id="content">
+           <p>OK, while I was browsing Sourceforge this evening, I came across a new release for a tool that I haven’t seen before - SSL-Explorer.  Per the project website:</p>
+
+<p><blockquote>SSL-Explorer is a fully-featured, web-based SSL <acronym title="Virtual Private Network">VPN</acronym> server. This practicable remote access security solution includes SSL tunneling, intranet website proxying, Microsoft Windows file sharing and Java application deployment through a standard browser</p>
+
+<p></blockquote>
+It works pretty well.  This is a pretty good solution for small businesses (or power users) who need to give remote access to users who may be using third party machines or those who are not savvy enough to set up a <acronym title="Virtual Private Network">VPN</acronym> connection.</p>
+
+<p>At my office, we do not allow most users to have <acronym title="Virtual Private Network">VPN</acronym> access due to file security concerns.  However, they are allowed to check and send email from home, on the road, etc.  However, we are using a mail filtering tool (Mailwasher Server) that is web-based.  This tool is only accessible from behind the LAN, though.  With SSL-Explorer, we could allow remote users to access these internal web resources by just going to the SSL-Explorer web <acronym title="Uniform Resource Locator">URL</acronym> that you make publicly available.  In addition, this also allows easy access to multiple remote desktop servers on your LAN…</p>
+
+<p>Well, go ahead and check it out:  <a href="http://sourceforge.net/projects/sslexplorer/">Sourceforge Project Page</a></p>
+
+<p>Tags: <a title="See the Technorati tag page for 'VPN'." rel="tag" href="http://technorati.com/tag/VPN"><acronym title="Virtual Private Network">VPN</acronym></a>, <a title="See the Technorati tag page for 'SSLExplorer'." rel="tag" href="http://technorati.com/tag/SSLExplorer">SSLExplorer</a></p>
+
+        </article>
+  </div>
+</section>
+</div>
+
+
+    <div class = "container">
+      <p><small>This site is copyrighted &copy; 2017 by Jeffrey Randow.    This work is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a>. <br/>
+        Hugo Theme "Mountains" by Jeffrey Randow.  Hugo Version 0.42.1.  Last Rebuild:  2018-02-18 00:00:00 &#43;0000 UTC </small></p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/docs.min.js"></script>
+    
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+    
+    
+  </body>
+</html>
+

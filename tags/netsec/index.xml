@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Netsec on Jeffreys Ruminations</title>
+    <link>https://www.jeffreyrandow.org/tags/netsec/</link>
+    <description>Recent content in Netsec on Jeffreys Ruminations</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.jeffreyrandow.org/tags/netsec/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PSA - Exploit.in and Anti-Public Exploit Warning</title>
+      <link>https://www.jeffreyrandow.org/netsec/exploit-in-anti-public-psa/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/netsec/exploit-in-anti-public-psa/</guid>
+      <description>This is a quick PSA (Public Service Announcement) to go check to see if your email address is included on the recently released-to-the-public Anti Public Combo List or the Exploit.in list. I was listed in the Exploit.in list. Note that if you are on the list, you generally did not do anything to cause yourself to be on this list - a website that you used was compromised and the account database was added to list.</description>
+    </item>
+    
+  </channel>
+</rss>

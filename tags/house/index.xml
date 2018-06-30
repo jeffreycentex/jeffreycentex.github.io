@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>House on Jeffreys Ruminations</title>
+    <link>https://www.jeffreyrandow.org/tags/house/</link>
+    <description>Recent content in House on Jeffreys Ruminations</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 May 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.jeffreyrandow.org/tags/house/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Life Updates and Musings</title>
+      <link>https://www.jeffreyrandow.org/blogs/life-updates-and-musings/</link>
+      <pubDate>Mon, 19 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/life-updates-and-musings/</guid>
+      <description>(includes updates from May 25, 2014 - JER)
+I&amp;rsquo;ve gotten this website to a functional level, so I guess it is time to do an update on what is going on in my life right now. It&amp;rsquo;s been a busy time, but I&amp;rsquo;ve been enjoying myself working on some interesting projects at work. Life is different in the non-engineering world and I think it would have been better if I had changed a few years earlier than I did.</description>
+    </item>
+    
+  </channel>
+</rss>

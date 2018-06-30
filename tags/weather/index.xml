@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weather on Jeffreys Ruminations</title>
+    <link>https://www.jeffreyrandow.org/tags/weather/</link>
+    <description>Recent content in Weather on Jeffreys Ruminations</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Sep 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.jeffreyrandow.org/tags/weather/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tropical Storm Hermine Redux</title>
+      <link>https://www.jeffreyrandow.org/blogs/tropical-storm-hermine-redux/</link>
+      <pubDate>Wed, 08 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/tropical-storm-hermine-redux/</guid>
+      <description>My official total as of 8 AM Wednesday morning is 6.89 inches of total rainfall. We are expecting more this afternoon.
+This is an excerpt of an email I sent to my office staff:
+In the (immediate) aftermath of Tropical Storm Hermine, I thought you might like to know the total precipitation that has fallen as a result of this storm. This data was obtained by individuals using high accuracy manual rain gauges and are part of the CoCoRaHS network (Community Collaborative Rain, Hail, and Snow Network) – I’m station TX-CML-38.</description>
+    </item>
+    
+    <item>
+      <title>Weather Website</title>
+      <link>https://www.jeffreyrandow.org/blogs/weather-website/</link>
+      <pubDate>Mon, 30 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/weather-website/</guid>
+      <description>This is just a quick posting that I have made the weather website live again&amp;hellip; This is the site I used to have up a long time ago and is still very beta and needs to have many more improvements made, but for those of you in the local area who need access to the current data on this side of New Braunfels, please have at it: New Braunfels Weather</description>
+    </item>
+    
+  </channel>
+</rss>

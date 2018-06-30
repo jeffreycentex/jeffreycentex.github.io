@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Walking on Jeffreys Ruminations</title>
+    <link>https://www.jeffreyrandow.org/tags/walking/</link>
+    <description>Recent content in Walking on Jeffreys Ruminations</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Jun 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.jeffreyrandow.org/tags/walking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>May 2014 Fitness Summary</title>
+      <link>https://www.jeffreyrandow.org/blogs/may-2014-fitness-summary/</link>
+      <pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.jeffreyrandow.org/blogs/may-2014-fitness-summary/</guid>
+      <description>This is my summary posting of my May 2014 fitness activities. Most of my workouts and tracking is available on the main page of this website under the Fitness Log tab. This contains my Walk/Jogging activities.
+For the month of May, I tracked that I walked or jogged approximately 30 miles in monitored activities (i.e., I did a planned walking/jogging workout; this does not include the incidental walking that I do during the day).</description>
+    </item>
+    
+  </channel>
+</rss>
