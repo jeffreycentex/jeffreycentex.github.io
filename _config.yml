@@ -5,8 +5,8 @@ timezone: America/Chicago
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: World of Jeff Randow
-tagline: The thoughts and musings of Jeff Randow and the world around him
+title: Jeff Randow
+tagline: the thoughts and musings of Jeff Randow and the world around him
 description: >- # used by seo meta and the atom feed
   The personal home, thoughts, CV, and projects that Jeff Randow has created, used, or promoted.  Also life
   in Central Texas, New Braunfels, Georgia Tech OMSCS, UT Austin, and Texas State University.
@@ -28,7 +28,7 @@ social:
     - https://twitter.com/jeffreycentex
     - https://github.com/jeffreycentex
     - https://www.facebook.com/jeffreycentex
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/jeffreyrandow
 
 webmaster_verifications:
   google:
@@ -41,17 +41,6 @@ google_analytics:
 goatcounter:
   id: jeffreycentex
 
-# Prefer color scheme setting.
-#
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
-#
-# Available options:
-#
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
-#
 theme_mode: light
 
 # The CDN endpoint for images.
@@ -62,7 +51,7 @@ theme_mode: light
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: assets/img/jeff-reduced.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -149,6 +138,10 @@ defaults:
       path: assets/js/dist
     values:
       swcache: true
+  - scope:
+      path: assets/img
+    values:
+      image: true
 
 sass:
   style: compressed
