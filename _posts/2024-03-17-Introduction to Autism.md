@@ -12,7 +12,6 @@ At the age of 39, I decided to change my life by ending my career as an engineer
 
 What signs did I have about my autism?  Here is a short list.  As an adult, I now know how to work-around these difficulties for the most part.
 
-  - Limited empathy towards others (It's not that I don't have empathy, but it doesn't happen automatically)
   - Unsteady gait, balance, coordination issues
   - Lack of noticing verbal and non-verbal clues from others
   - Communications difficulties with other (i.e., due to taking most concepts literally, not being able to look at people in the eyes, not picking up social cues in conversations, etc)
@@ -21,10 +20,15 @@ What signs did I have about my autism?  Here is a short list.  As an adult, I no
   - Late Speech Development
   - Dislike physical contact
   - Extremely good long term memory, terrible short term memory
-  - Difficulty in reading emotions in others.
 
-Some of these traits I think of as benefits, but some are definitely hindrances that you will need to overcome.  Once I was diagnosed, I became relieved because I thought most of these faults were caused by me because I was either defective or stupid.  Once I discovered WHY I was this way, it made it MUCH EASIER to overcome and adapt.
+Some of these traits I think of as benefits, but some are definitely hindrances that I must work need to overcome.  Once I was diagnosed, I became relieved because I thought most of these faults were caused by me because I was either defective or stupid.  Once I discovered WHY I was this way, it made it MUCH EASIER to overcome and adapt.
 
-There are a lot of people out there who have autism.  We are everywhere and play an important part in our society.  Other than a few idiosyncracies, you won't recognize most of us as we have learned how to interact with others and our environment.
+There are a lot of people out there who have autism.  We are everywhere and play an important part in our society.  Other than a few idiosyncracies, you won't recognize most of us as we have learned how to interact with others and our environment.  We can be a great asset to you as a friend or as a coworker.
 
-I will state, however, that there are a few things with me that I can't correct.  I can't deal with my gait issues.  However, this is more embarassing than as an issue.  The next is that when I get into a loud area like a concert, I will generally get over-stimulated and will zone out until I have time to adjust.  Thus my comment that I am not a party animal now makes sense.
+Here are a few references that I have found invaluable:
+
+  - [The Asperkid's (Secret) Book of Social Rules.  The Handbook of (Not-So-Obvious) Neurotypical Social Guidelines for Autistic Teens](https://www.amazon.com/s?k=asperkids+secret+book+of+social+rules&crid=2M49ZGSYWQVA8&sprefix=asperkids%2Caps%2C158&ref=nb_sb_ss_ts-doa-p_1_9)
+  - [Nerdy, Shy, and Socially Inapprpriate](https://www.amazon.com/Nerdy-Shy-Socially-Inappropriate-Asperger-ebook/dp/B00MU2EH3C)
+  - [A Survival Guide for People Living With Asperger's Syndrome](https://autism-help.org/aspergers-guide-intro.htm)
+
+Also note that many people who are on the spectrum also have ADHD, but usually it is expressed differently than what most think of when considering what ADHD.  You can see some of it is our intense, but short-term, interest in different topics.  I rotate through a list of interests with a lot of short-term interest, but it doesn't persist after a few weeks/months.

@@ -29,12 +29,13 @@ social:
     - https://github.com/jeffreycentex
     - https://www.facebook.com/jeffreycentex
     - https://www.linkedin.com/in/jeffreyrandow
+    - https://techhub.social/@mythlodite
+    - https://mastodon.radio/@jeffreycentex
 
 webmaster_verifications:
-  google:
-# ↑ --------------------------
-# The end of `jekyll-seo-tag` settings
-
+  google: H9HuTqmPtX1LfTvVnl2JKswDd_631G5YVYFr0E8T2-g
+  bing: B160D0FBA35FCBF482CC9B7A920FF672
+  
 google_analytics:
   id: # fill in your Google Analytics ID
 
