@@ -22,7 +22,7 @@ I accept encrypted email.
 
 Signal:  Use my username **__jeffreycentex__**
 
-![Signal](/assets/keys/SignalGroupQr.png){: width="300" .left}
+![Signal](/assets/keys/SignalGroupQr.png){: width="300" .normal}
 
 If you must, you can send SMS/RCS to my cell phone number on my resume, but I prefer Signal or Threema.
 
@@ -30,7 +30,7 @@ If you must, you can send SMS/RCS to my cell phone number on my resume, but I pr
 
 My signing public GPG Keey is available as a [GitHub Gist](https://gist.github.com/jeffreycentex/5a5d3ab3116c9cb8ad9598dc63fb0c02).  This is different than the email address above.  
 
-I also have a keybase proof as a GitHub Gist
+I also have a keybase proof as a GitHub Gist.
 
 ### Social Media
 
