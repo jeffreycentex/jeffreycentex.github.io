@@ -36,3 +36,7 @@ I also have a keybase proof as a GitHub Gist.
 
 I'm on all the usual social media, though I primarily only use Facebook and Discord.  I'm slowly figuring out the Fediverse and am starting to use Mastodon.
 
+### Old Unmaintained Content
+
+https://jeffreycentex.gitlab.io 
+
