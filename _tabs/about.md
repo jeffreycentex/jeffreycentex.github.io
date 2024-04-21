@@ -12,6 +12,8 @@ I'm a hacker, but not like a classical computer hacker.  I can do that stuff, to
 
 Yeah, all those contradictions.  That's me.
 
+I'm also a member of the local emergency preparedness community - New Braunfels Community Emergency Response Team (CERT) and working on becoming a part of the NBCERT SAR Team (drone and communications), TDEM RACES (Radio Amateur Civil Emergency Serive), and Air Force MARS 65th Wing.
+
 ### How to contact me?
 
 Easiest way is email:  jeffrey -at- jeffreyrandow -dot- org  (You know what to do)
@@ -38,5 +40,5 @@ I'm on all the usual social media, though I primarily only use Facebook and Disc
 
 ### Old Unmaintained Content
 
-https://jeffreycentex.gitlab.io 
+[https://jeffreycentex.gitlab.io ](https://jeffreycentex.gitlab.io)
 
