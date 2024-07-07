@@ -2,6 +2,8 @@
 
 source "https://rubygems.org"
 
+gem "csv"
+gem "base64"
 gem "jekyll-theme-chirpy", "~> 6.5", ">= 6.5.3"
 
 group :test do
