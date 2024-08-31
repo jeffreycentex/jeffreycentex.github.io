@@ -18,7 +18,7 @@ I'm also a member of the local emergency preparedness community - New Braunfels 
 
 Easiest way is email:  jeffrey -at- jeffreyrandow -dot- org  (You know what to do)
 
-My Public Key for that email is available [here](/assets/keys/publickey.jeffrey@jeffreyrandow.org-fc2ebb8d3d0cbb246ea685d366f349357da2564e.asc).
+My Public Key for that email is available [here](/assets/keys/gpg-0xEA020EB8B631EE8A.key.pub). (Revised August 31, 2024)
 
 I accept encrypted email.
 
