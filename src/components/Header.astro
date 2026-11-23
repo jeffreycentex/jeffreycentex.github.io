@@ -1,0 +1,33 @@
+---
+import Icon from './Icon.astro';
+import { site } from '../data/site';
+const path = Astro.url.pathname;
+const active = (href: string) => path === href || path.startsWith(href);
+---
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label={`${site.name} home`}>
+      <svg class="brand-mark" viewBox="0 0 64 64" width="22" height="22" aria-hidden="true"><path d="M32 4l6 22 22 6-22 6-6 22-6-22-22-6 22-6z" fill="currentColor"/></svg>
+      <span>{site.name}</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+      <Icon name="menu" size={22} />
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      {site.nav.map((n) => (
+        <a href={n.href} aria-current={active(n.href) ? 'page' : undefined}>{n.label}</a>
+      ))}
+      <a class="nav-search" href="/search/" aria-label="Search" aria-current={active('/search/') ? 'page' : undefined}>
+        <Icon name="search" size={18} />
+      </a>
+    </nav>
+  </div>
+</header>
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.nav-toggle');
+  const nav = document.getElementById('site-nav');
+  btn?.addEventListener('click', () => {
+    const open = nav?.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(!!open));
+  });
+</script>

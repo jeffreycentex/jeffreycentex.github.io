@@ -1,0 +1,65 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { render } from 'astro:content';
+import { getProjects } from '../../lib/docs';
+
+export async function getStaticPaths() {
+  const projects = await getProjects();
+  return projects.map((project) => ({ params: { slug: project.id }, props: { project } }));
+}
+const { project } = Astro.props;
+const { Content, headings } = await render(project);
+const d = project.data;
+const toc = headings.filter((h) => h.depth === 2);
+const [lead, ...rest] = d.screenshots;
+---
+<Base title={d.title} description={d.tagline} image={lead?.src}>
+  <div class="wrap">
+    <div class="page-head" style="padding-bottom:0">
+      <p class="eyebrow"><a href="/projects/" style="text-decoration:none">Projects</a></p>
+      <h1>{d.title}</h1>
+      <p>{d.tagline}</p>
+      <div class="chips" style="margin-bottom:1rem">{d.platforms.map((p) => <span class="chip active">{p}</span>)}{d.tags.map((t) => <span class="chip">{t}</span>)}{d.license && <span class="chip">{d.license}</span>}</div>
+      <div class="btn-row" style="margin-top:.5rem">
+        {d.docs && <a class="btn btn-primary" href={`/docs/${d.docs}/`}><Icon name="download" size={18} /> Install guide</a>}
+        <a class="btn" href={d.repo}><Icon name="github" size={18} /> Source &amp; releases</a>
+      </div>
+    </div>
+
+    <div class="article-layout">
+      <article data-pagefind-body>
+        {lead && (
+          <figure class="shot lead">
+            <img src={lead.src} alt={lead.alt} />
+            <figcaption>{lead.caption}</figcaption>
+          </figure>
+        )}
+        <div class="prose"><Content /></div>
+        {rest.length > 0 && (
+          <section>
+            <h2 style="margin-top:2.2em">Screenshots</h2>
+            <div class="shots">
+              {rest.map((s) => (
+                <figure class="shot"><a href={s.src}><img src={s.src} alt={s.alt} loading="lazy" /></a><figcaption>{s.caption}</figcaption></figure>
+              ))}
+            </div>
+          </section>
+        )}
+        {d.docs && (
+          <div class="card" style="margin-top:2.5rem;max-width:82ch">
+            <h3>Ready to try it?</h3>
+            <p>The install guide covers requirements, downloads, building from source, and first-run setup.</p>
+            <div class="btn-row" style="margin-top:.5rem"><a class="btn btn-primary" href={`/docs/${d.docs}/`}>Open the install guide <Icon name="arrow" size={18} /></a></div>
+          </div>
+        )}
+      </article>
+      {toc.length > 0 && (
+        <nav class="toc" aria-label="On this page">
+          <h4>On this page</h4>
+          <ul>{toc.map((h) => <li class="l2"><a href={`#${h.slug}`}>{h.text}</a></li>)}<li class="l2"><a href="#screenshots">Screenshots</a></li></ul>
+        </nav>
+      )}
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,15 @@
+---
+import Icon from './Icon.astro';
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© {year} {site.name} · <strong>{site.callsign}</strong> · Built with Astro, hosted on GitHub Pages<br /><small>Milky Way panorama: <a href="https://www.eso.org/public/images/eso0932a/">ESO/S. Brunier</a> (<a href="https://www.eso.org/public/outreach/copyright/">CC BY</a>)</small></p>
+    <ul class="social" aria-label="Social links">
+      {site.socials.map((s) => (
+        <li><a href={s.href} rel={s.rel ?? 'noopener'} aria-label={s.label} title={s.label}><Icon name={s.icon} size={18} /></a></li>
+      ))}
+    </ul>
+  </div>
+</footer>

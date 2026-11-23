@@ -1,0 +1,24 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getDocs, docSections } from '../../lib/docs';
+const docs = await getDocs();
+---
+<Base title="Docs" description="Install guides for KiwiSDR Remote, Icom Remote and FLDigi Net Scheduler, plus HF digital modes, Air Force MARS, EMCOMM and CERT guides.">
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">Documentation</p>
+      <h1>Docs &amp; radio library.</h1>
+      <p>Install guides and practical references. Looking for features and screenshots? See the <a href="/projects/">project pages</a>. Or <a href="/search/">search</a> everything.</p>
+    </div>
+    {docSections.map((s) => (
+      <section class="section">
+        <div class="section-head"><h2>{s.label}</h2><span class="muted">{s.blurb}</span></div>
+        <div class="grid">
+          {docs.filter((d) => d.data.section === s.key).map((d) => (
+            <a class="card" href={`/docs/${d.id}/`}><h3>{d.data.title}</h3><p>{d.data.description}</p></a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</Base>

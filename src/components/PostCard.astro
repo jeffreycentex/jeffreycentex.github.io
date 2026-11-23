@@ -1,0 +1,11 @@
+---
+import { fmtDate, readingTime, slugify } from '../lib/blog';
+const { post } = Astro.props;
+const d = post.data;
+---
+<article class="card hoverable">
+  <div class="meta"><a class="chip" href={`/blog/category/${slugify(d.category)}/`}>{d.category}</a> · {fmtDate(d.pubDate)} · {readingTime(post.body)} min read</div>
+  <h3><a href={`/blog/${post.id}/`} style="color:inherit;text-decoration:none">{d.title}</a></h3>
+  <p>{d.description}</p>
+  <div class="chips">{d.tags.map((t: string) => <a class="chip" href={`/blog/tags/${slugify(t)}/`}>#{t}</a>)}</div>
+</article>

@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import { render } from 'astro:content';
+import { getPosts, fmtDate, readingTime, slugify } from '../../lib/blog';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+const d = post.data;
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+<Base title={d.title} description={d.description}>
+  <div class="wrap">
+    <div class="article-layout">
+      <article data-pagefind-body>
+        <div class="page-head" style="padding-top:2rem">
+          <p class="eyebrow"><a href={`/blog/category/${slugify(d.category)}/`} style="text-decoration:none">{d.category}</a></p>
+          <h1 data-pagefind-meta="title">{d.title}</h1>
+          <div class="post-meta">
+            <time datetime={d.pubDate.toISOString()}>{fmtDate(d.pubDate)}</time>
+            {d.updatedDate && <span>Updated {fmtDate(d.updatedDate)}</span>}
+            <span>{readingTime(post.body)} min read</span>
+            {d.tags.map((t) => <a class="chip" href={`/blog/tags/${slugify(t)}/`}>#{t}</a>)}
+          </div>
+        </div>
+        <div class="prose" style="margin-top:1.5rem"><Content /></div>
+      </article>
+      {toc.length > 0 && (
+        <nav class="toc" aria-label="On this page" style="margin-top:2rem">
+          <h4>On this page</h4>
+          <ul>{toc.map((h) => <li class={`l${h.depth}`}><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
+        </nav>
+      )}
+    </div>
+  </div>
+</Base>

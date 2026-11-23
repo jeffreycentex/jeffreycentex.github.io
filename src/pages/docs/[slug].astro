@@ -1,0 +1,57 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { render } from 'astro:content';
+import { getDocs, getProjects, docSections } from '../../lib/docs';
+
+export async function getStaticPaths() {
+  const docs = await getDocs();
+  const projects = await getProjects();
+  return docs.map((doc) => ({
+    params: { slug: doc.id },
+    props: { doc, docs, project: projects.find((p) => p.data.docs === doc.id) },
+  }));
+}
+const { doc, docs, project } = Astro.props;
+const { Content, headings } = await render(doc);
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const label = docSections.find((s) => s.key === doc.data.section)?.label;
+---
+<Base title={doc.data.title} description={doc.data.description}>
+  <div class="wrap">
+    <div class="docs-layout">
+      <nav class="docs-nav" aria-label="Documentation">
+        <h4><a href="/docs/" style="color:inherit;border:0;padding:0;display:inline">Docs</a></h4>
+        {docSections.map((s) => (
+          <>
+            <h4>{s.label}</h4>
+            <ul>{docs.filter((d) => d.data.section === s.key).map((d) => (
+              <li><a href={`/docs/${d.id}/`} aria-current={d.id === doc.id ? 'page' : undefined}>{d.data.title}</a></li>
+            ))}</ul>
+          </>
+        ))}
+      </nav>
+      <article data-pagefind-body>
+        <div class="doc-head">
+          <div>
+            <p class="eyebrow">{label}</p>
+            <h1 data-pagefind-meta="title">{doc.data.title}</h1>
+            <p class="muted" style="font-size:1.15rem;max-width:70ch">{doc.data.description}</p>
+          </div>
+          {doc.data.image && <img class="doc-logo" src={doc.data.image} alt={doc.data.imageAlt ?? ''} width="160" />}
+        </div>
+        <div class="btn-row" style="margin-top:1rem">
+          {project && <a class="btn" href={`/projects/${project.id}/`}>Project overview &amp; screenshots</a>}
+          {doc.data.repo && <a class="btn" href={doc.data.repo}><Icon name="github" size={18} /> GitHub</a>}
+        </div>
+        <div class="prose" style="margin-top:1.5rem"><Content /></div>
+      </article>
+      {toc.length > 0 && (
+        <nav class="toc" aria-label="On this page">
+          <h4>On this page</h4>
+          <ul>{toc.map((h) => <li class={`l${h.depth}`}><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
+        </nav>
+      )}
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,23 @@
+---
+// Build-time generated star tiles (SVG data URIs). No JS, no image requests.
+function rng(seed: number) {
+  let s = seed;
+  return () => (s = (s * 1664525 + 1013904223) % 4294967296) / 4294967296;
+}
+function tile(size: number, count: number, seed: number, maxR: number) {
+  const r = rng(seed);
+  const tints = ['#ffffff', '#dfe8ff', '#ffe9c7', '#ffd08a'];
+  let c = '';
+  for (let i = 0; i < count; i++) {
+    const x = (r() * size).toFixed(0);
+    const y = (r() * size).toFixed(0);
+    const rad = (0.4 + r() * maxR).toFixed(2);
+    const o = (0.35 + r() * 0.65).toFixed(2);
+    c += `<circle cx="${x}" cy="${y}" r="${rad}" fill="${tints[Math.floor(r() * tints.length)]}" fill-opacity="${o}"/>`;
+  }
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}">${c}</svg>`;
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
+}
+const style = `--stars-a:${tile(500, 55, 7, 0.7)};--stars-b:${tile(800, 38, 21, 1.0)};--stars-c:${tile(1200, 18, 99, 1.4)}`;
+---
+<div class="starfield" aria-hidden="true" style={style}></div>

@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import resume from '../data/resume.json';
+import { site } from '../data/site';
+
+const fmt = (d?: string) => {
+  if (!d) return 'Present';
+  const [y, m] = d.split('-');
+  return m ? new Date(Date.UTC(+y, +m - 1)).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' }) : y;
+};
+const contact = [
+  resume.basics.location,
+  site.email,
+  'linkedin.com/in/jeffreyrandow',
+  'github.com/jeffreycentex',
+  'jeffreycentex.github.io',
+];
+---
+<Base title="Resume" description="Resume of Jeff Randow (N5SNT): healthcare IT developer, security practitioner and Georgia Tech instructional associate.">
+  <div class="wrap">
+    <div class="page-head no-print">
+      <p class="eyebrow">Resume</p>
+      <h1>Jeff Randow</h1>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="print" type="button"><Icon name="download" size={18} /> Print / Save as PDF</button>
+        <a class="btn" href="/about/">About me</a>
+      </div>
+    </div>
+
+    <article class="resume" data-pagefind-body>
+      <header class="r-head">
+        <h1>{resume.basics.name}</h1>
+        <p class="r-label">{resume.basics.label}</p>
+        <p class="r-contact">{contact.map((c, i) => <span>{c}{i < contact.length - 1 ? ' · ' : ''}</span>)}</p>
+      </header>
+
+      <section>
+        <h2>Summary</h2>
+        <p>{resume.basics.summary}</p>
+      </section>
+
+      <section>
+        <h2>Core skills</h2>
+        <dl class="r-skills">
+          {resume.skills.map((s) => (<><dt>{s.name}</dt><dd>{s.keywords.join(' · ')}</dd></>))}
+        </dl>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        {resume.work.map((w) => (
+          <div class="r-job">
+            <div class="r-row"><h3>{w.position}</h3><span class="r-when">{fmt(w.startDate)} – {fmt(w.endDate)}</span></div>
+            <div class="r-org">{w.name} · {w.location}</div>
+            {'note' in w && w.note && <p class="r-note">{w.note}</p>}
+            {w.highlights.length > 0 && <ul>{w.highlights.map((h) => <li>{h}</li>)}</ul>}
+          </div>
+        ))}
+      </section>
+
+      <section>
+        <h2>Open-source projects</h2>
+        <ul>
+          {resume.projects.map((p) => <li><strong>{p.name}</strong> ({p.url.replace('https://', '')}). {p.description}</li>)}
+        </ul>
+      </section>
+
+      <section class="r-two">
+        <div>
+          <h2>Education</h2>
+          <ul class="r-plain">
+            {resume.education.map((e) => <li><strong>{e.studyType} {e.area}</strong><br />{e.institution}, {e.startDate}–{e.endDate}</li>)}
+          </ul>
+          <h2>Recognition</h2>
+          <ul class="r-plain">
+            {resume.awards.map((a) => <li><strong>{a.title}</strong>, {a.awarder}. {a.summary}</li>)}
+          </ul>
+        </div>
+        <div>
+          <h2>Service and communications</h2>
+          <ul class="r-plain">
+            {resume.volunteer.map((v) => <li><strong>{v.organization}</strong><br />{v.position}. {v.summary}</li>)}
+          </ul>
+        </div>
+      </section>
+    </article>
+  </div>
+</Base>
+<script>
+  document.getElementById('print')?.addEventListener('click', () => window.print());
+</script>

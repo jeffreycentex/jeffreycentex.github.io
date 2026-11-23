@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import resume from '../data/resume.json';
+import { site } from '../data/site';
+const fmt = (d?: string) => {
+  if (!d) return 'Present';
+  const [y, m] = d.split('-');
+  return m ? new Date(Date.UTC(+y, +m - 1)).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' }) : y;
+};
+const beyond = ['Hiking and backpacking', 'Tuba in community bands', 'Drones and 3D printing', 'Meshtastic and AREDN mesh networks', 'KiwiSDR shortwave receiver', 'Raspberry Pi and Arduino nodes', 'Pickleball, bowling and D&D', 'Weather station: AP086, APRS N5SNT-2, Weather Underground KTXNEWBR1, CoCoRaHS'];
+---
+<Base title="About" description="About Jeff Randow (N5SNT): experience, education, volunteer work, resume and contact links.">
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">About</p>
+      <h1>Engineer, educator, explorer.</h1>
+    </div>
+
+    <div class="two-col" style="margin-top:1.5rem">
+      <div class="prose">
+        <p>I'm an engineer and scientist by education and a hacker at heart. I started in environmental engineering, then went back to school for computer science and landed in healthcare IT, where I build the data pipelines, HL7 interfaces and clinical tools that keep a busy nephrology practice running.</p>
+        <p>Outside the day job I'm an Instructional Associate for Georgia Tech's online MS in Computer Science, supporting <em>Computer Networks</em> and <em>Graduate Introduction to Operating Systems</em>. On the radio side I'm <strong>{site.callsign}</strong>, a member of the 65th Communications Group, 6th Communications Wing, <a href="/docs/air-force-mars/">Air Force MARS</a>, and I volunteer with <a href="/docs/new-braunfels-cert/">New Braunfels CERT</a>, including its search and rescue drone team. I also run a <a href={site.kiwi}>public KiwiSDR</a> you can listen to.</p>
+        <p>I share what I learn here: security notes from the field, healthcare informatics, and the radio and SDR tools I write.</p>
+
+        <h2>Experience</h2>
+        <ul class="timeline">
+          {resume.work.map((w) => (
+            <li>
+              <span class="when">{fmt(w.startDate)} – {fmt(w.endDate)}</span>
+              <h3>{w.position}</h3>
+              <div class="muted">{w.name} · {w.location}</div>
+              {w.highlights.length > 0 && <ul>{w.highlights.map((h) => <li>{h}</li>)}</ul>}
+            </li>
+          ))}
+        </ul>
+
+        <h2>Volunteer &amp; community</h2>
+        <ul class="timeline">
+          {resume.volunteer.map((v) => (
+            <li><span class="when">{fmt(v.startDate)} – Present</span><h3>{v.organization}</h3><div class="muted">{v.position}</div><p style="margin-top:.4rem">{v.summary}</p></li>
+          ))}
+        </ul>
+
+        <h2>Education &amp; recognition</h2>
+        <ul>
+          {resume.education.map((e) => <li><strong>{e.studyType} {e.area}</strong>, {e.institution} ({e.startDate}–{e.endDate})</li>)}
+          {resume.awards.map((a) => <li><strong>{a.title}</strong>, {a.awarder}. {a.summary}</li>)}
+        </ul>
+
+        <h2>Skills</h2>
+        <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+          {resume.skills.map((s) => (
+            <div class="card"><h3 style="font-size:1rem">{s.name}</h3><div class="chips" style="padding-top:0">{s.keywords.map((k) => <span class="chip">{k}</span>)}</div></div>
+          ))}
+        </div>
+
+        <h2>Beyond the keyboard</h2>
+        <ul>{beyond.map((b) => <li>{b}</li>)}</ul>
+      </div>
+
+      <aside style="position:sticky;top:84px;display:grid;gap:1.25rem">
+        <div class="card" style="align-items:center;text-align:center">
+          <div class="portrait" style="width:200px"><img src="/img/headshot-400.webp" width="400" height="400" alt="Portrait of Jeff Randow" /></div>
+          <h3 style="margin-top:.75rem">{site.name}</h3>
+          <p>{site.callsign} · New Braunfels, TX</p>
+          <div class="btn-row" style="justify-content:center;margin-top:.75rem">
+            <a class="btn btn-primary" href={site.resumeUrl}><Icon name="download" size={18} /> Resume</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Find me</h3>
+          <dl class="kv">
+            <dt>Email</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
+            <dt>Signal</dt><dd class="mono">{site.signal}</dd>
+            <dt>PGP</dt><dd><a href="/keys/">{site.gpg.keyId}</a></dd>
+            <dt>Prefers</dt><dd>Signal or Threema over SMS</dd>
+          </dl>
+          <ul class="social" style="margin-top:.75rem">
+            {site.socials.map((s) => <li><a href={s.href} rel={s.rel ?? 'noopener'} aria-label={s.label} title={s.label}><Icon name={s.icon} size={18} /></a></li>)}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Base>

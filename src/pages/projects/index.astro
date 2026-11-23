@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import { getProjects } from '../../lib/docs';
+const projects = await getProjects();
+---
+<Base title="Projects" description="Open-source SDR and radio tools: KiwiSDR Remote Client, Icom Remote Client Next and FLDigi Net Scheduler.">
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">Projects</p>
+      <h1>Tools for the bands.</h1>
+      <p>Open-source software for remote HF operating, SDR listening and digital-mode nets. Each project has an overview with screenshots here, an install guide in the docs, and source on GitHub.</p>
+    </div>
+    <div class="grid project-grid" style="margin-top:2rem">
+      {projects.map((p) => (
+        <article class="card hoverable">
+          {p.data.screenshots[0] && (
+            <a href={`/projects/${p.id}/`} class="shot-link"><img src={p.data.screenshots[0].src} alt={p.data.screenshots[0].alt} loading="lazy" /></a>
+          )}
+          <h3><a href={`/projects/${p.id}/`} style="color:inherit;text-decoration:none">{p.data.title}</a></h3>
+          <p>{p.data.tagline}</p>
+          <div class="chips">{p.data.tags.map((t) => <span class="chip">{t}</span>)}</div>
+          <div class="btn-row" style="margin-top:.75rem">
+            <a class="btn btn-primary" href={`/projects/${p.id}/`}>Overview</a>
+            {p.data.docs && <a class="btn" href={`/docs/${p.data.docs}/`}>Install guide</a>}
+            <a class="btn" href={p.data.repo} aria-label={`${p.data.title} on GitHub`}><Icon name="github" size={18} /></a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</Base>

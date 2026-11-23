@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getPosts, categories, slugify } from '../../lib/blog';
+const posts = await getPosts();
+---
+<Base title="Blog" description="Technical writing on security, healthcare informatics, radio and projects.">
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">Blog</p>
+      <h1>Notes from the field.</h1>
+      <p>Security, healthcare informatics, radio and project write-ups. <a href="/search/">Search</a> · <a href="/rss.xml">RSS</a></p>
+      <div class="chips"><span class="chip active">All</span>{categories.map((c) => <a class="chip" href={`/blog/category/${slugify(c)}/`}>{c}</a>)}</div>
+    </div>
+    <div class="grid" style="margin-top:2rem">{posts.map((p) => <PostCard post={p} />)}</div>
+  </div>
+</Base>

@@ -1,0 +1,79 @@
+{
+  "basics": {
+    "name": "Jeff Randow",
+    "label": "Healthcare IT Developer · Security · Instructional Associate",
+    "location": "New Braunfels, Texas",
+    "summary": "Healthcare IT developer and security practitioner with 13+ years running the data, integrations and endpoint security behind a 16-clinic nephrology practice that serves about 30,000 patients a year. Also an Instructional Associate at Georgia Tech, supporting a networking course that averages 1,200 students per semester. M.S. in Computer Science; B.S. in Environmental Engineering."
+  },
+  "work": [
+    {
+      "name": "San Antonio Kidney",
+      "position": "Healthcare IT Developer and Security Administrator",
+      "location": "San Antonio, TX",
+      "startDate": "2013-05",
+      "note": "Embedded with Panoramic Health, the practice's managed-services provider, until September 2026. Returned to practice employee status October 2026.",
+      "highlights": [
+        "Designed and maintain a daily export pipeline (Python, Pandas, Transact-SQL, XLSXWriter) that moves thousands of clinical, billing, claims, financial and admin rows a day from the Veradigm EHR/PM system into the managed-services data warehouse. In production about 8 years and updated through every major EHR/PM upgrade.",
+        "Built and support about 7 bi-directional HL7 interfaces between labs, providers and the EHR, including the XML transforms needed to import results into the chart.",
+        "Built a Flask clinical portal used by about 40 internal staff to manage patients on a hemoglobin-raising drug. It combines EHR and PM data, charts history, shows lab levels and insurance eligibility, and warns when lab data is stale.",
+        "Automated clinical, accounting and billing reports into a self-service portal, giving about 40 staff on-demand data and replacing manual report requests (SSRS, SSMS, Transact-SQL).",
+        "Develop against the Veradigm Unity API and FHIR to integrate and extract EHR data, and design internal APIs for the practice's tools.",
+        "Run endpoint and identity security for 95 users across 16 clinics (11 full-time, 5 part-time), covering EDR/XDR, endpoint protection, Azure remote access and identity protection, with 20 physicians and 5 nurse practitioners relying on it."
+      ]
+    },
+    {
+      "name": "Georgia Institute of Technology (OMSCS)",
+      "position": "Instructional Associate",
+      "location": "Atlanta, GA (remote)",
+      "startDate": "2016-01",
+      "highlights": [
+        "Help teach CS 6250 Computer Networks and CS 8200 Graduate Introduction to Operating Systems in the online M.S. in Computer Science. The networking course averages about 1,200 students per semester.",
+        "Own the SDN Firewall project end to end, including grading and academic-integrity follow-up. Migrated it from the Pyretic to the POX OpenFlow controller and updated it for Python and controller changes.",
+        "Maintain and support the Mininet-based Simulating Networks project.",
+        "Run chat sessions and office hours to support students."
+      ]
+    },
+    {
+      "name": "Texas State University",
+      "position": "Teaching Assistant, Computer Networks",
+      "location": "San Marcos, TX",
+      "startDate": "2013-01",
+      "endDate": "2013-05",
+      "highlights": []
+    },
+    {
+      "name": "Central Texas Engineering and Technology Group",
+      "position": "Owner",
+      "location": "New Braunfels, TX",
+      "startDate": "2011-07",
+      "endDate": "2015-07",
+      "highlights": ["Hardware and software engineering for local companies while completing a computer science certificate."]
+    }
+  ],
+  "projects": [
+    { "name": "KiwiSDR Remote Client", "url": "https://github.com/jeffreycentex/kiwisdr-remote-client", "description": "Receive-only desktop and headless client for remote KiwiSDR receivers with recording, hamlib rigctl and an HTTP/JSON API. Python, Qt. Windows, macOS and Linux." },
+    { "name": "Icom Remote Client Next", "url": "https://github.com/jeffreycentex/icom-remote-client-next", "description": "Cross-platform client for Icom RS-BA1 radios with safety-focused PTT rules, CAT/rigctld, an HTTP API and recording. Python, PySide6." },
+    { "name": "FLDigi Net Scheduler", "url": "https://github.com/jeffreycentex/fldigi-net-scheduler", "description": "Retunes fldigi on a UTC schedule for digital nets, with optional SDR connect and recording. Python, PySide6, XML-RPC." }
+  ],
+  "volunteer": [
+    { "organization": "US Air Force MARS, 65th Communications Group, 6th Communications Wing", "position": "Operator", "startDate": "2023-03", "summary": "Voice and data communications support to the DoD and US Air Force." },
+    { "organization": "New Braunfels CERT", "position": "Member: Drone Team, EOC and Watch Tower", "startDate": "2022-09", "summary": "Disaster exercises, community events, EOC and Watch Tower duty; Drone Team member studying for the FAA Part 107 certificate." },
+    { "organization": "Texas RACES and SkyWARN", "position": "Member; SkyWARN Basic and Advanced trained", "summary": "Emergency communications and severe-weather reporting." }
+  ],
+  "education": [
+    { "institution": "Georgia Institute of Technology", "studyType": "M.S.", "area": "Computer Science (Computing Systems)", "startDate": "2015", "endDate": "2020" },
+    { "institution": "Texas State University", "studyType": "Certificate", "area": "Computer Science", "startDate": "2011", "endDate": "2013" },
+    { "institution": "University of Texas at Austin", "studyType": "B.S.", "area": "Environmental Engineering", "startDate": "1990", "endDate": "1995" }
+  ],
+  "awards": [
+    { "title": "Microsoft MVP", "awarder": "Microsoft", "date": "2001", "summary": "Community support for Windows Server and Windows Networking (2001–2008)." }
+  ],
+  "skills": [
+    { "name": "Healthcare IT", "keywords": ["Veradigm EHR/PM", "HL7", "FHIR", "Unity API", "Data warehousing", "Clinical reporting"] },
+    { "name": "Security", "keywords": ["EDR/XDR", "Endpoint protection", "Azure identity", "Remote access", "API design"] },
+    { "name": "Development", "keywords": ["Python", "Flask", "Pandas", "PySide6/Qt", "C / C++", "JavaScript / TypeScript"] },
+    { "name": "Data", "keywords": ["Transact-SQL", "SSRS", "SSMS", "MySQL / MariaDB", "SQLite"] },
+    { "name": "Networking and teaching", "keywords": ["SDN / OpenFlow (POX)", "Mininet", "Operating systems", "Curriculum maintenance", "Grading and academic integrity"] },
+    { "name": "Radio and field", "keywords": ["SDR / KiwiSDR", "fldigi", "Winlink", "APRS", "Meshtastic / MeshCore", "AREDN"] }
+  ]
+}
