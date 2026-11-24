@@ -69,6 +69,13 @@ const beyond = ['Hiking and backpacking', 'Tuba in community bands', 'Drones and
           </div>
         </div>
         <div class="card">
+          <h3>On the air</h3>
+          <dl class="kv">
+            {site.onAir.map((o) => (<><dt>{o.label}</dt><dd class="mono">{o.href ? <a href={o.href}>{o.value}</a> : o.value}</dd></>))}
+          </dl>
+          <p style="margin-top:.5rem"><a href="/docs/on-the-air/">More about my stations →</a></p>
+        </div>
+        <div class="card">
           <h3>Find me</h3>
           <dl class="kv">
             <dt>Email</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>

@@ -8,21 +8,24 @@ import { site } from '../data/site';
     <div class="page-head">
       <p class="eyebrow">Digital keys</p>
       <h1>Verify me. Write to me securely.</h1>
-      <p>Encrypted email and signed commits are welcome. Always compare the fingerprint below with a second source before trusting a key.</p>
+      <p>Encrypted email and signed commits are welcome. I publish more than one key, one per address I use. Always compare a fingerprint with a second source before trusting a key.</p>
     </div>
 
     <div class="grid" style="margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))">
-      <section class="card">
-        <span class="icon"><Icon name="key" size={28} /></span>
-        <h3>PGP public key</h3>
-        <p>Used for encrypted email to <span class="mono">{site.email}</span>.</p>
-        <dl class="kv">
-          <dt>Key ID</dt><dd class="mono">{site.gpg.keyId}</dd>
-        </dl>
-        <div class="fp"><code id="fp">{site.gpg.fingerprint}</code><button class="btn" id="copy" type="button">Copy</button></div>
-        <div class="btn-row" style="margin-top:.5rem"><a class="btn btn-primary" href={site.gpg.file} download><Icon name="download" size={18} /> Download .asc</a></div>
-        <pre class="mono muted" style="margin:.75rem 0 0;font-size:.82rem">gpg --import gpg-0xEA020EB8B631EE8A.asc</pre>
-      </section>
+      {site.keys.map((k) => (
+        <section class="card">
+          <span class="icon"><Icon name="key" size={28} /></span>
+          <h3>PGP key: {k.label}</h3>
+          <dl class="kv">
+            <dt>Key ID</dt><dd class="mono">{k.id}</dd>
+            <dt>Email</dt><dd class="mono">{k.emails.join(', ')}</dd>
+            <dt>Created</dt><dd>{k.created}</dd>
+          </dl>
+          <div class="fp"><code data-fp>{k.fingerprint}</code><button class="btn copy" type="button">Copy</button></div>
+          <div class="btn-row" style="margin-top:.5rem"><a class="btn btn-primary" href={k.file} download><Icon name="download" size={18} /> Download .asc</a></div>
+          <pre class="mono muted" style="margin:.75rem 0 0;font-size:.82rem">gpg --import {k.file.split('/').pop()}</pre>
+        </section>
+      ))}
 
       <section class="card">
         <span class="icon"><Icon name="signal" size={28} /></span>
@@ -41,19 +44,21 @@ import { site } from '../data/site';
         <span class="icon"><Icon name="github" size={28} /></span>
         <h3>Other identities</h3>
         <ul style="margin:0;padding-left:1.2rem;color:var(--muted)">
-          <li><a href="https://gist.github.com/jeffreycentex/5a5d3ab3116c9cb8ad9598dc63fb0c02">Signing key (GitHub Gist)</a></li>
           <li><a href="https://github.com/jeffreycentex">GitHub</a></li>
           <li><a rel="me" href="https://mastodon.radio/@jeffreycentex">Mastodon</a></li>
+          <li><a href="https://x.com/jeffreycentex">X (Twitter)</a></li>
+          <li><a href="https://www.linkedin.com/in/jeffreyrandow">LinkedIn</a></li>
         </ul>
       </section>
     </div>
   </div>
 </Base>
 <script>
-  const b = document.getElementById('copy');
-  b?.addEventListener('click', async () => {
-    const t = document.getElementById('fp')?.textContent?.replace(/\s+/g, '') ?? '';
-    try { await navigator.clipboard.writeText(t); b.textContent = 'Copied'; } catch { b.textContent = 'Press ⌘/Ctrl+C'; }
-    setTimeout(() => (b.textContent = 'Copy'), 1800);
+  document.querySelectorAll<HTMLButtonElement>('button.copy').forEach((b) => {
+    b.addEventListener('click', async () => {
+      const t = b.parentElement?.querySelector('[data-fp]')?.textContent?.replace(/\s+/g, '') ?? '';
+      try { await navigator.clipboard.writeText(t); b.textContent = 'Copied'; } catch { b.textContent = 'Press ⌘/Ctrl+C'; }
+      setTimeout(() => (b.textContent = 'Copy'), 1800);
+    });
   });
 </script>

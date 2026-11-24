@@ -119,3 +119,24 @@ pactl load-module module-remap-source master=IcomRX.monitor source_name=IcomRX_i
 Avoid `pactl set-default-source IcomRX.monitor`. It works, but it also redirects every other program's microphone to the radio.
 
 > The Linux steps are standard PulseAudio and PipeWire usage but have not yet been tested on a real Linux desktop with these apps.
+
+### KiwiSDR Remote on Linux (one cable)
+
+KiwiSDR Remote uses a slightly different one-cable layout. Click **Create 'KiwiSDR' virtual cable** in the app, or run these commands. They last until the next logout or reboot.
+
+```bash
+pactl load-module module-null-sink sink_name=KiwiSDR sink_properties=device.description=KiwiSDR
+pactl load-module module-remap-source master=KiwiSDR.monitor source_name=KiwiSDR_RX source_properties=device.description=KiwiSDR-RX
+```
+
+In KiwiSDR Remote, play to `PulseAudio/PipeWire sink: KiwiSDR`. In WSJT-X, JS8Call or fldigi, choose `KiwiSDR-RX` as the input. The remapped source is needed because WSJT-X and JS8Call often hide monitor sources such as "Monitor of KiwiSDR". Restart WSJT-X or JS8Call afterward, since they only list audio devices at startup. Because the client is receive-only, the decoder's output can be any device.
+
+To make it permanent, put the same two `load-module` lines in `~/.config/pulse/default.pa` (after `.include /etc/pulse/default.pa`) on PulseAudio. On PipeWire, add them to a `pulse.cmd` list in `~/.config/pipewire/pipewire-pulse.conf.d/kiwisdr.conf` and run `systemctl --user restart pipewire-pulse`.
+
+If WSJT-X shows no input devices at all:
+
+- `pactl list short sources` should list `KiwiSDR_RX`. If it doesn't, the module didn't load.
+- A **Flatpak** build needs sound-server access: `flatpak override --user --socket=pulseaudio <app-id>`. A **snap** build needs its `audio-record` interface connected.
+- If Qt uses ALSA, install `pipewire-alsa` (or `alsa-plugins-pulseaudio` / `libasound2-plugins` on PulseAudio). The `pulse` or `default` input then appears, and you can route it to `KiwiSDR-RX` in `pavucontrol` → Recording.
+
+On Windows, devices are listed once per host API (MME, DirectSound, WASAPI), and MME or WASAPI both work. The app opens a device at its default sample rate and resamples to it.

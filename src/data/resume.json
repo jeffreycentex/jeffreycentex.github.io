@@ -51,8 +51,8 @@
     }
   ],
   "projects": [
-    { "name": "KiwiSDR Remote Client", "url": "https://github.com/jeffreycentex/kiwisdr-remote-client", "description": "Receive-only desktop and headless client for remote KiwiSDR receivers with recording, hamlib rigctl and an HTTP/JSON API. Python, Qt. Windows, macOS and Linux." },
-    { "name": "Icom Remote Client Next", "url": "https://github.com/jeffreycentex/icom-remote-client-next", "description": "Cross-platform client for Icom RS-BA1 radios with safety-focused PTT rules, CAT/rigctld, an HTTP API and recording. Python, PySide6." },
+    { "name": "KiwiSDR Remote Client", "url": "https://github.com/jeffreycentex/kiwisdr-remote-client/tree/digitalmodes", "description": "Receive-only client for KiwiSDR receivers with dual audio outputs, built-in MFSK/Contestia decoding, FLAMP reception, recording, hamlib rigctl, an HTTP/JSON API and headless mode. Python, Qt. Windows, macOS and Linux." },
+    { "name": "Icom Remote Client Next", "url": "https://github.com/jeffreycentex/icom-remote-client-next/tree/digitalmodes", "description": "Cross-platform RS-BA1 client for Icom radios with remote voice and data, built-in MFSK/Contestia decoding and FLAMP reception, rigctld and an HTTP API. Python, PySide6." },
     { "name": "FLDigi Net Scheduler", "url": "https://github.com/jeffreycentex/fldigi-net-scheduler", "description": "Retunes fldigi on a UTC schedule for digital nets, with optional SDR connect and recording. Python, PySide6, XML-RPC." }
   ],
   "volunteer": [

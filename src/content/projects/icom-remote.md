@@ -1,57 +1,87 @@
 ---
 title: Icom Remote Client Next
-tagline: A cross-platform client for Icom's RS-BA1 LAN remote protocol, with CAT/rigctld, an HTTP API, DATA PTT, voice, and recording. No shack PC required.
-repo: https://github.com/jeffreycentex/icom-remote-client-next
+tagline: An open-source RS-BA1 client for Icom radios with remote voice and data, dual audio outputs, built-in MFSK and Contestia decoding, FLAMP file reception, Hamlib and an HTTP API.
+repo: https://github.com/jeffreycentex/icom-remote-client-next/tree/digitalmodes
 docs: icom-remote
 order: 20
 platforms: [Windows, macOS, Linux]
-tags: [Python, PySide6, RS-BA1, Icom, CAT]
+tags: [Python, PySide6, RS-BA1, Icom, Digital modes, FLAMP]
 license: GPL-3.0-or-later
 screenshots:
-  - src: /img/projects/icom-main.webp
-    alt: Icom Remote running on macOS in dark mode before connecting
-    caption: The Radio tab on macOS, before connecting.
+  - src: /img/projects/icom-macos.webp
+    alt: Icom Remote Next Radio tab on macOS showing connection, tuning, filters, presets and meters
+    caption: Radio tab. Connection, tuning, mode, filters, presets, PTT, RF power and meters.
+  - src: /img/projects/icom-audio.webp
+    alt: Audio tab with two receive outputs, transmit input and modulation-source settings
+    caption: Audio tab. Two receive outputs with separate gains, a transmit input, and DATA MOD / DATA OFF MOD switching.
+  - src: /img/projects/icom-data.webp
+    alt: Data tab showing demonstration MFSK32 decoded text with quality meter and squelch
+    caption: Data tab. Built-in MFSK16/32/64 and Contestia decoding with RSID auto-detection and squelch.
+  - src: /img/projects/icom-flamp.webp
+    alt: FLAMP tab showing complete and partial demonstration transfers
+    caption: FLAMP tab. Files and messages with retained blocks, missing-block tracking and automatic saving.
+  - src: /img/projects/icom-dsp.webp
+    alt: DSP tab with radio noise reduction, noise blanker and notch plus computer bandpass and notch filters
+    caption: DSP tab. IC-7300MK2 radio DSP controls and computer bandpass and notch filters.
+  - src: /img/projects/icom-recording-control.webp
+    alt: Recording and control tab showing recording formats and local rig-control servers
+    caption: Recording and control tab. WAV and M4A/MP4 recording, Hamlib rigctld and the HTTP API.
+  - src: /img/projects/icom-log.webp
+    alt: Log tab showing the current session log and export button
+    caption: Log tab. Live session log with full export.
 ---
 
-Icom Remote Next talks directly to the network server built into supported Icom radios. There is no RS-BA1 software and no PC at the radio. It was built for the IC-7300MK2 and follows the design of [KiwiSDR Remote](/projects/kiwisdr-remote/). This "Next" revision keeps the protocol and adds a tabbed GUI plus safer control and recording.
+> This page covers the **`digitalmodes` branch**, which has the current features, screenshots and releases (v1.2 at the time of writing). [Browse the branch on GitHub](https://github.com/jeffreycentex/icom-remote-client-next/tree/digitalmodes).
+
+Icom Remote Next is a Python implementation of Icom's **RS-BA1 network protocol** for Windows, macOS and Linux. It builds on the protocol work in [kappanhang](https://github.com/nonoo/kappanhang) and wraps it in a desktop interface that connects directly to an **IC-7300MK2 or IC-705** over the radio's built-in LAN or WLAN connection. There is no RS-BA1 software and no PC at the radio.
+
+I use it every day to take part in Air Force MARS nets from remote sites, working both voice and digital traffic through the station's radio. Switching between remote voice operation and data from a computer at the radio is part of that everyday workflow.
 
 ## Features
 
-- **Radio tab:** connection, tuning, S-meter, preset buttons, DATA PTT, voice arming, RF power, tuner and transmit meters, and Output/SWR readout.
-- **Tune** frequency, mode (LSB, USB, AM, FM and the DATA variants) and filter (FIL1 to FIL3).
-- **Quick tune** buttons from a simple `name, kHz` file.
-- **Transmit** data audio from a virtual cable or voice from a microphone, with strict PTT rules and a PTT timeout.
-- **DATA MOD / DATA OFF MOD handling:** the app switches the radio's modulation input to LAN while connected and puts the original back afterwards, including crash recovery from an on-disk record.
-- **Antenna tuner** TUNE cycle, and **power on/off** from the app.
-- **rigctld** on `127.0.0.1:4532` for WSJT-X, JTDX, JS8Call and fldigi (Hamlib NET rigctl).
-- **Remote control API** (HTTP/JSON) for schedulers like [FLDigi Net Scheduler](/projects/fldigi-net-scheduler/).
-- **Recording** of received audio to WAV or AAC in M4A/MP4.
-- **Diagnostics:** `--check` self-test, a connection probe tool, rotating logs, and optional packet dumps.
+- **Control** frequency, mode (LSB, USB, AM, FM and the DATA variants), FIL1 to FIL3, RF power and the antenna tuner, with up to 15 frequency presets.
+- **Two receive outputs at once**, each with its own gain and buffering. For example, feed a decoder through a virtual cable and listen on speakers at the same time.
+- **Transmit voice or data** from a microphone or a virtual cable, with armed Space-bar voice PTT and CAT-controlled data PTT.
+- **Switch the transmit source while connected.** DATA MOD and DATA OFF MOD move between LAN and local USB with PTT released first, a confirmed readback and tracked restoration.
+- **Decode digital modes in the app:** MFSK16, MFSK32, MFSK64 and Contestia 4-250, with RSID auto-detection, adjustable squelch, live receiver audio or saved audio files.
+- **Receive FLAMP files and messages,** retaining valid blocks across repeats and decoder restarts, then saving automatically or on request.
+- **Filter and tune.** IC-7300MK2 noise reduction, noise blanker and notch, plus a computer bandpass and manual notch. Low Power Tune and Powered Tune send a 1 kHz tone to start antenna tuning.
+- **Record** received audio as WAV or AAC in M4A/MP4.
+- **Integrate** through a Hamlib rigctld server (WSJT-X, JTDX, JS8Call, fldigi and MS-DMT), an HTTP API and a console client.
 
-## Safety first
+The built-in digital features are receive-only. Programs such as fldigi, WSJT-X or MS-DMT can provide transmit audio and use the client's rig control.
 
-Transmitting remotely deserves careful rules, so the app is built around them:
+## Built with safety in mind
 
-- All changes go through one service boundary with a bounded command worker.
-- PTT goes straight to the radio's session loop, so recording can't delay key-up, and a second caller can't take over an active key-down.
-- Voice PTT must be armed, starts off at every launch, and disarms on disconnect or when the window loses focus.
-- Keying stops on timeout, mode change while keyed, disconnect, input change, or when the rigctl client that keyed it disconnects.
-- Tuner and mode/frequency changes are refused while transmitting.
-- CAT is loopback-only by default, and the HTTP API keeps Host, token and CORS protections.
+- Keying is refused unless the DATA state, audio source and input all match. Voice PTT must be armed, starts off at every launch and disarms when the window loses focus, the tab changes, the connection drops or the timeout expires.
+- Repeated key-down requests never extend the timeout, and a CAT client's PTT is released if that client disconnects.
+- Audio routes that would feed receive audio back into the transmit input are rejected.
+- Modulation settings are written to a restore file first, and recovered at the next connection if the app is killed.
+- CAT is loopback-only, and the HTTP API keeps Host and token protections.
 
-> RS-BA1 itself uses reversible credential obfuscation. Run it on a trusted network or through an encrypted tunnel.
+> The RS-BA1 credential encoding is reversible, so use a trusted network or an encrypted VPN or tunnel when you reach a station remotely.
 
 ## Supported radios
 
-| Radio | CI-V | DATA MOD switching | TUNE | Tested |
-|---|---|---|---|---|
-| IC-7300MK2 | B6h | yes | yes | on the radio |
-| IC-705 | A4h | yes | yes (external tuner) | fake radio only |
-| IC-9700 | A2h | yes | no | fake radio only |
-| IC-7610 | 98h | no (set to LAN on the radio) | yes | fake radio only |
+| Radio | Default CI-V | Status |
+|---|---|---|
+| IC-7300MK2 | B6h | Primary radio, used daily. Radio DSP and tone-tune controls available. |
+| IC-705 | A4h | Owner-confirmed operation. Automatic modulation-source switching uses WLAN. |
+| IC-9700 | A2h | Profile and protocol tested with the simulated radio. No antenna-tuner command. |
+| IC-7610 | 98h | Profile tested with the simulated radio. Set modulation sources manually on the radio. |
 
-Other RS-BA1 radios may connect with *Auto*, but only receive and basic CAT are expected.
+Connection with other RS-BA1 radios is not guaranteed by the *Auto* profile.
+
+## What changed recently
+
+- **v1.2:** Data and FLAMP tabs with a bundled native decoder, two simultaneous receive outputs, connected DATA MOD and DATA OFF MOD switching, TUNE as a toggle with Low Power and Powered Tune, and a Custom receive filter.
+- **v1.1:** DSP tab, Low Power Tune, 15 presets and a Log tab with export.
+- **v1.0:** an original radio icon and single-file Windows and Linux builds.
 
 ## How it fits together
 
-IC-7300MK2 ⇄ UDP (ports 50001 to 50003) ⇄ Icom Remote ⇄ rigctld and [virtual audio cables](/docs/virtual-audio/) ⇄ your digital-mode software.
+IC-7300MK2 or IC-705, over UDP (ports 50001 to 50003), to Icom Remote, which feeds [virtual audio cables](/docs/virtual-audio/), rigctld and the built-in decoders for fldigi, WSJT-X, MS-DMT or [FLDigi Net Scheduler](/projects/fldigi-net-scheduler/).
+
+## Credits and licensing
+
+GPL-3.0-or-later. The RS-BA1 implementation is based on kappanhang (MIT). The digital reception engine uses fldigi-derived native modem sources, with their GPL and LGPL notices retained in the repository.
