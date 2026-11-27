@@ -12,4 +12,4 @@ export const fmtDate = (d: Date) =>
 
 export const readingTime = (body = '') => Math.max(1, Math.round(body.split(/\s+/).length / 220));
 
-export const categories = ['Security', 'Healthcare Informatics', 'Projects', 'Radio'] as const;
+export const categories = ['Security', 'Healthcare Informatics', 'Projects', 'Radio', 'Health'] as const;
